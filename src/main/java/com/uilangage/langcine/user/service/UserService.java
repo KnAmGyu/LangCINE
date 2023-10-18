@@ -3,6 +3,7 @@ package com.uilangage.langcine.user.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.uilangage.langcine.common.EncryptUtils;
 import com.uilangage.langcine.user.domain.User;
 import com.uilangage.langcine.user.repository.UserRepository;
 
@@ -15,7 +16,10 @@ public class UserService {
 	
 	public User getUser(String loginId, String password) {
 		
-		User user = userRepository.findByLoginIdAndPassword(loginId, password).orElse(null);
+		
+		String encryptString = EncryptUtils.md5(password);
+		
+		User user = userRepository.findByLoginIdAndPassword(loginId, encryptString).orElse(null);
 		 
 		return user;
 	
@@ -29,9 +33,12 @@ public class UserService {
 			, String email
 			, String phoneNumber) {
 		
+		
+		String encryptPassword = EncryptUtils.md5(password);
+		
 		User user = User.builder()
 						.loginId(loginId)
-						.password(password)
+						.password(encryptPassword)
 						.userName(userName)
 						.nickName(nickName)
 						.email(email)
