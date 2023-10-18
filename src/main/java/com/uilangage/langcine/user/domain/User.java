@@ -55,6 +55,7 @@ public class User {
 	private Date updatedAt;
 
 
+
 	
 	
 }
