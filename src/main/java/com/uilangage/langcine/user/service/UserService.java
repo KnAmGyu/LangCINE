@@ -12,6 +12,15 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
+	
+	public User getUser(String loginId, String password) {
+		
+		User user = userRepository.findByLoginIdAndPassword(loginId, password).orElse(null);
+		 
+		return user;
+	
+	}
+	
 	public User addUser(
 			String loginId
 			, String password
