@@ -25,10 +25,10 @@ public class UserRestController {
 	@PostMapping("/login")
 	public Map<String, String> login(
 			@RequestParam("loginId") String loginId
-			, @RequestParam("password") String password
+			, @RequestParam("password") String userPassword
 			, HttpServletRequest request){
 		
-		User user = userService.getUser(loginId, password);
+		User user = userService.getUser(loginId, userPassword);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		
@@ -49,13 +49,13 @@ public class UserRestController {
 	@PostMapping("/join")
 	public Map<String, String> join(
 			@RequestParam("loginId") String loginId
-			, @RequestParam("password") String password
+			, @RequestParam("password") String userPassword
 			, @RequestParam("name") String userName
 			, @RequestParam("nickName") String nickName
 			, @RequestParam("email") String email
 			, @RequestParam("phoneNumber") String phoneNumber){
 		
-		User user = userService.addUser(loginId, password, userName, nickName, email, phoneNumber);
+		User user = userService.addUser(loginId, userPassword, userName, nickName, email, phoneNumber);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		if(user != null) {

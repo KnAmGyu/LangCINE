@@ -14,12 +14,12 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	
-	public User getUser(String loginId, String password) {
+	public User getUser(String loginId, String userPassword) {
 		
 		
-		String encryptString = EncryptUtils.md5(password);
+		String encryptString = EncryptUtils.md5(userPassword);
 		
-		User user = userRepository.findByLoginIdAndPassword(loginId, encryptString).orElse(null);
+		User user = userRepository.findByLoginIdAndUserPassword(loginId, encryptString).orElse(null);
 		 
 		return user;
 	
@@ -27,18 +27,18 @@ public class UserService {
 	
 	public User addUser(
 			String loginId
-			, String password
+			, String userPassword
 			, String userName
 			, String nickName
 			, String email
 			, String phoneNumber) {
 		
 		
-		String encryptPassword = EncryptUtils.md5(password);
+		String encryptPassword = EncryptUtils.md5(userPassword);
 		
 		User user = User.builder()
 						.loginId(loginId)
-						.password(encryptPassword)
+						.userPassword(encryptPassword)
 						.userName(userName)
 						.nickName(nickName)
 						.email(email)

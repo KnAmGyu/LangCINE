@@ -11,6 +11,6 @@ import com.uilangage.langcine.user.domain.User;
 public interface UserRepository extends JpaRepository<User, Integer>  {
 
 	
-	public Optional<User> findByLoginIdAndPassword(String loginId, String password); 
+	public Optional<User> findByLoginIdAndUserPassword(String loginId, String userPassword); 
 	
 }

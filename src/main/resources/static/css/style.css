@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+ul{list-style: none; padding:0;}
+a:hover{
+	cursor: pointer;
+}
+
+#header-section{
+	position:relative;
+	height: 144px;
+	
+}
+#logo{
+	position: absolute;
+	top:18px;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+#header-section .gnb{
+	width:980px;
+	height:70px;
+	display:flex;
+	justify-content: end;
+	padding:40px 16px 0 0;
+	margin:0 auto;
+	
+}
+#nav{
+	width:980px;
+	margin:0 auto;
+	text-align:center;
+}
+#nav ul {
+	display: flex;
+	justify-content: center;
+}
+#nav ul li a{
+	display:block;
+	padding: 0 24px;
+	line-height: 40px;
+	height:40px;
+	position:relative;
+}
+
+#nav ul li:hover a{
+	border-bottom: 2px solid #ff1744;
+
+	
+}
+#footer-section{
+	margin-top:80px;
+}
+#footer-section .inner{
+	width:980px;
+	margin:0 auto;
+}
+
+
+#content-section .content-wrap{
+	width:980px;
+	margin:80px auto 0 auto;
+}
+.login-form{
+	position:relative;
+	width:490px;
+	padding-right: 120px;
+}
+
+.input-form input{
+	display:block;
+	width:100%;
+}
+
+.input-form input + input{
+	margin-top:10px;
+}
+
+
+.input-form input[type=text]{
+	height:45px;
+	border-radius: 8px;
+	padding:0 8px;
+	border:1px solid #ddd;
+	font-size:14px;
+}
+
+.btn-form button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width:100px;
+	height:100px;
+	border:none;
+}

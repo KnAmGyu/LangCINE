@@ -33,7 +33,9 @@ public class User {
 	
 	@Column(name="loginId")
 	private String loginId;
-	private String password;
+	
+	@Column(name="userPassword")
+	private String userPassword;
 	
 	@Column(name="userName")
 	private String userName;
