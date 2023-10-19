@@ -19,12 +19,12 @@ a:hover{
 
 #header-section .gnb{
 	width:980px;
-	height:70px;
+	height:90px;
 	display:flex;
 	justify-content: end;
 	padding:40px 16px 0 0;
 	margin:0 auto;
-	
+	border-bottom: 1px solid #ddd;
 }
 #nav{
 	width:980px;
@@ -61,6 +61,12 @@ a:hover{
 	width:980px;
 	margin:80px auto 0 auto;
 }
+
+.content-wrap h4{
+	margin-bottom: 24px;
+}
+
+
 .login-form{
 	position:relative;
 	width:490px;
@@ -85,11 +91,28 @@ a:hover{
 	font-size:14px;
 }
 
-.btn-form button{
+.login-form .btn-form button{
 	position: absolute;
 	top: 0;
 	right: 0;
 	width:100px;
 	height:100px;
 	border:none;
+}
+
+.input-form + .btn-form{
+	margin-top: 20px;
+}
+
+
+.join-wrap .btn-form{
+	display:flex;
+	justify-content: end;
+}
+
+.btn-form button{
+	padding:0 20px;
+	height:40px;
+	border:none;
+	border-radius: 8px;
 }

@@ -29,7 +29,6 @@ public class UserService {
 			String loginId
 			, String userPassword
 			, String userName
-			, String nickName
 			, String email
 			, String phoneNumber) {
 		
@@ -40,7 +39,6 @@ public class UserService {
 						.loginId(loginId)
 						.userPassword(encryptPassword)
 						.userName(userName)
-						.nickName(nickName)
 						.email(email)
 						.phoneNumber(phoneNumber)
 						.build();

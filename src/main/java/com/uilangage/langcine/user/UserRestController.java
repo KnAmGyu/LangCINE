@@ -51,11 +51,10 @@ public class UserRestController {
 			@RequestParam("loginId") String loginId
 			, @RequestParam("password") String userPassword
 			, @RequestParam("name") String userName
-			, @RequestParam("nickName") String nickName
 			, @RequestParam("email") String email
 			, @RequestParam("phoneNumber") String phoneNumber){
 		
-		User user = userService.addUser(loginId, userPassword, userName, nickName, email, phoneNumber);
+		User user = userService.addUser(loginId, userPassword, userName, email, phoneNumber);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		if(user != null) {

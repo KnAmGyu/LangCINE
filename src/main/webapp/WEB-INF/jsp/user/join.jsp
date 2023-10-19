@@ -15,17 +15,17 @@
 		
 		<div id="content-section">
 			<div class="content-wrap">
+				<h4>회원가입</h4>
 				<div class="join-wrap">			
 					<div class="input-form">
 						<input type="text" id="idInput" placeholder="아이디를 입력해주세요." class="">
 						<input type="text" id="passwordInput" placeholder="비밀번호를 입력해주세요." class="">
-						<input type="text" id="nameInput" placeholder="비밀번호를 입력해주세요." class="">
-						<input type="text" id="nickNameInput" placeholder="비밀번호를 입력해주세요." class="">
-						<input type="text" id="emailInput" placeholder="비밀번호를 입력해주세요." class="">
-						<input type="text" id="phoneNumberInput" placeholder="비밀번호를 입력해주세요." class="">
+						<input type="text" id="nameInput" placeholder="이름을 입력해주세요." class="">
+						<input type="text" id="emailInput" placeholder="이메일을 입력해주세요." class="">
+						<input type="text" id="phoneNumberInput" placeholder="전화번호를 입력해주세요." class="">
 					</div>
 					<div class="btn-form">
-						<button type="submit" id="loginBtn">로그인</button>
+						<button type="button" id="joinBtn">회원가입</button>
 					</div>
 				</div>
 			
@@ -40,5 +40,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/static/js/queryscript.js"></script>
 </body>
 </html>
