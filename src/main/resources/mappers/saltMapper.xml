@@ -17,8 +17,6 @@
 			`salt`
 		WHERE 
 			`loginId` = #{loginId}
-	
-  		
   	</select>
   	<insert id="addSalt" parameterType="map">
   		INSERT INTO

@@ -6,6 +6,27 @@
   
   <mapper namespace="com.uilangage.langcine.user.repository.UserRepository">
   
+  <select id="selectUser" parameterType="int" 
+	resultType="com.uilangage.langcine.user.domain.User">
+  		SELECT 
+			`id`
+			, `loginId`
+			, `userPassword`
+			, `userName`
+			, `nickName`
+			, `email`
+			, `phoneNumber`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`user`
+		WHERE 
+			`loginId` = #{loginId}
+			AND
+			`userPassword` = #{userPassword}
+  	</select>
+  
+  
   <insert id="addUser" parameterType="map">
 		INSERT INTO 
 			`user`

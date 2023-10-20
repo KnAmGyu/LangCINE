@@ -20,17 +20,15 @@ public class UserService {
 	private SaltRepository saltRepository;
 	
 	
-	public User getUser(String loginId, String userPassword) {
+	public int getUser(String loginId, String userPassword) {
 		
 		
 		String salt = saltRepository.selectSalt(loginId).getSalt();
 		
 		String password = SHA256Util.getEncrypt(userPassword, salt);
-//		String encryptString = EncryptUtils.md5(userPassword);
-//		
-//		User user = userRepository.findByLoginIdAndUserPassword(loginId, encryptString).orElse(null);
-		 
-//		return user;
+
+		return userRepository.selectUser(loginId, password);
+		
 	
 	}
 	
