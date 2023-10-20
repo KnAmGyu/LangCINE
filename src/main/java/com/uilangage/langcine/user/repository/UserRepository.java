@@ -1,16 +1,24 @@
 package com.uilangage.langcine.user.repository;
 
-import java.util.Optional;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.uilangage.langcine.user.domain.User;
 
-@Repository
-public interface UserRepository extends JpaRepository<User, Integer>  {
 
+@Repository
+public interface UserRepository{
+
+	public int addUser(
+			@Param("loginId") String loginId
+			, @Param("userPassword") String userPassword
+			, @Param("userName") String userName
+			, @Param("email") String email
+			, @Param("phoneNumber") String phoneNumber);
 	
-	public Optional<User> findByLoginIdAndUserPassword(String loginId, String userPassword); 
+	public User selectUser(
+			@Param("loginId") String loginId
+			, @Param("userPassword") String password);
 	
 }

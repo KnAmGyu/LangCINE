@@ -22,42 +22,42 @@ public class UserRestController {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/login")
-	public Map<String, String> login(
-			@RequestParam("loginId") String loginId
-			, @RequestParam("password") String userPassword
-			, HttpServletRequest request){
-		
-		User user = userService.getUser(loginId, userPassword);
-		
-		Map<String, String> resultMap = new HashMap<>();
-		
-		if(user != null) {
-			HttpSession session = request.getSession();
-			
-			session.setAttribute("userId", user.getId());
-			session.setAttribute("userLoginId", user.getLoginId());
-			
-			resultMap.put("result", "success");
-		}else {
-			resultMap.put("result", "fail");
-		}
-		return resultMap;
-		
-	}
+//	@PostMapping("/login")
+//	public Map<String, String> login(
+//			@RequestParam("loginId") String loginId
+//			, @RequestParam("password") String userPassword
+//			, HttpServletRequest request){
+//		
+//		User user = userService.getUser(loginId, userPassword);
+//		
+//		Map<String, String> resultMap = new HashMap<>();
+//		
+//		if(user != null) {
+//			HttpSession session = request.getSession();
+//			
+//			session.setAttribute("userId", user.getId());
+//			session.setAttribute("userLoginId", user.getLoginId());
+//			
+//			resultMap.put("result", "success");
+//		}else {
+//			resultMap.put("result", "fail");
+//		}
+//		return resultMap;
+//		
+//	}
 	
 	@PostMapping("/join")
 	public Map<String, String> join(
 			@RequestParam("loginId") String loginId
-			, @RequestParam("password") String userPassword
-			, @RequestParam("name") String userName
+			, @RequestParam("userPassword") String userPassword
+			, @RequestParam("userName") String userName
 			, @RequestParam("email") String email
 			, @RequestParam("phoneNumber") String phoneNumber){
 		
-		User user = userService.addUser(loginId, userPassword, userName, email, phoneNumber);
+		int count = userService.addUser(loginId, userPassword, userName, email, phoneNumber);
 		
 		Map<String, String> resultMap = new HashMap<>();
-		if(user != null) {
+		if(count == 1) {
 			resultMap.put("result", "success");
 		}else {
 			resultMap.put("result", "fail");

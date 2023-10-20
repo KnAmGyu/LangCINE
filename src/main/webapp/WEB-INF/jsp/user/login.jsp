@@ -20,7 +20,7 @@
 					<form id="loginForm">
 						<div class="input-form">
 							<input type="text" id="loginIdInput" placeholder="아이디를 입력해주세요." class="">
-							<input type="text" id="loginPasswordInput" placeholder="비밀번호를 입력해주세요." class="">
+							<input type="password" id="loginPasswordInput" placeholder="비밀번호를 입력해주세요." class="">
 						</div>
 						<div class="btn-form">
 							<button type="submit" id="loginBtn">로그인</button>

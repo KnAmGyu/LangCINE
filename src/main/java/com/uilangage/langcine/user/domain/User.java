@@ -2,58 +2,74 @@ package com.uilangage.langcine.user.domain;
 
 import java.sql.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.UpdateTimestamp;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-
-
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Getter
-@Table(name="user")
-@Entity
 public class User {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+
 	private int id;
-	
-	@Column(name="loginId")
 	private String loginId;
-	
-	@Column(name="userPassword")
 	private String userPassword;
-	
-	@Column(name="userName")
 	private String userName;
-	
-	@Column(name="nickName")
 	private String nickName;
 	private String email;
-	
-	@Column(name="phoneNumber")
 	private String phoneNumber;
-	
-	
-	@UpdateTimestamp
-	@Column(name="createdAt", updatable=false)
 	private Date createdAt;
 	
-	@UpdateTimestamp
-	@Column(name="updatedAt")
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getLoginId() {
+		return loginId;
+	}
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getNickName() {
+		return nickName;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 	private Date updatedAt;
 
 

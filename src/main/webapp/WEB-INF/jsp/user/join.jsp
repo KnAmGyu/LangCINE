@@ -19,7 +19,7 @@
 				<div class="join-wrap">			
 					<div class="input-form">
 						<input type="text" id="idInput" placeholder="아이디를 입력해주세요." class="">
-						<input type="text" id="passwordInput" placeholder="비밀번호를 입력해주세요." class="">
+						<input type="password" id="passwordInput" placeholder="비밀번호를 입력해주세요." class="">
 						<input type="text" id="nameInput" placeholder="이름을 입력해주세요." class="">
 						<input type="text" id="emailInput" placeholder="이메일을 입력해주세요." class="">
 						<input type="text" id="phoneNumberInput" placeholder="전화번호를 입력해주세요." class="">
