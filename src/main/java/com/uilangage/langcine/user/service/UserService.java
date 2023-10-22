@@ -20,7 +20,7 @@ public class UserService {
 	private SaltRepository saltRepository;
 	
 	
-	public int getUser(String loginId, String userPassword) {
+	public User getUser(String loginId, String userPassword) {
 		
 		
 		String salt = saltRepository.selectSalt(loginId).getSalt();

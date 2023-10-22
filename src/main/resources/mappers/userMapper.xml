@@ -6,8 +6,7 @@
   
   <mapper namespace="com.uilangage.langcine.user.repository.UserRepository">
   
-  <select id="selectUser" parameterType="int" 
-	resultType="com.uilangage.langcine.user.domain.User">
+  <select id="selectUser" resultType="com.uilangage.langcine.user.domain.User">
   		SELECT 
 			`id`
 			, `loginId`

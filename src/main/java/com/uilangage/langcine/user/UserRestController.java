@@ -28,14 +28,15 @@ public class UserRestController {
 			, @RequestParam("password") String userPassword
 			, HttpServletRequest request){
 		
-		int count = userService.getUser(loginId, userPassword);
+		User user = userService.getUser(loginId, userPassword);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		
-		if(count == 1) {
+		if(resultMap != null) {
 			HttpSession session = request.getSession();
 			
-				
+			session.setAttribute("userId", user.getId());
+			session.setAttribute("userLoginId", user.getLoginId());
 			
 			resultMap.put("result", "success");
 		}else {
