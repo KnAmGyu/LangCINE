@@ -22,6 +22,8 @@ public class ManagerRestController {
 	
 	@Autowired
 	private ManagerService managerService;
+	
+	
 
 	@PostMapping("/login")
 	public Map<String, String> loginManager(

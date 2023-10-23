@@ -145,7 +145,7 @@ $(document).ready(function(){
 			, data:{"adminId":loginAdminId,"adminPassword":adminPassword}
 			, success:function(data){
 				if(data.result == "success"){
-					location.href = "/admin/join-view";
+					location.href = "/admin/main-view";
 				}else{
 					alert("관리자 아이디 비밀번호를 확인해 주세요");
 				}

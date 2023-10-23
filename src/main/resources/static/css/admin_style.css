@@ -9,3 +9,20 @@
 .content > .input-box {
 	width:400px;
 }
+#content-section{
+	display: flex;
+}
+
+
+.left-side{  width:200px; height:700px;  color:#000;  }
+.nav{ margin-top: 40px; }
+.nav a{ padding-left: 16px; display:inline-block; line-height: 54px; height:54px; color:#000; font-size: 24px; width:100%; font-weight: bold;}
+.nav a:hover{border-bottom:2px solid #fff;}
+
+.contents{padding: 40px; width:calc(100% - 200px);}
+
+.movie-list{width:100%;}
+
+.movie-list thead th{ background-color: #ddd; font-size: 20px; text-align: center; padding: 8px 0;}
+.movie-list tbody tr{ border-bottom: 1px solid #ddd; }
+.movie-list tbody td{ text-align: center; font-size: 16px; padding: 6px 0; }
