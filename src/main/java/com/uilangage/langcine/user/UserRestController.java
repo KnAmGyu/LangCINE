@@ -25,7 +25,7 @@ public class UserRestController {
 	@PostMapping("/login")
 	public Map<String, String> login(
 			@RequestParam("loginId") String loginId
-			, @RequestParam("password") String userPassword
+			, @RequestParam("userPassword") String userPassword
 			, HttpServletRequest request){
 		
 		User user = userService.getUser(loginId, userPassword);
@@ -36,7 +36,7 @@ public class UserRestController {
 			HttpSession session = request.getSession();
 			
 			session.setAttribute("userId", user.getId());
-			session.setAttribute("userLoginId", user.getLoginId());
+			session.setAttribute("userName", user.getUserName());
 			
 			resultMap.put("result", "success");
 		}else {

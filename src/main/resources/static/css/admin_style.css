@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#wrap{
+	width:1200px;
+	margin:0 auto;
+	height: 700px;
+}
+
+.content > .input-box {
+	width:400px;
+}

@@ -58,31 +58,103 @@ $(document).ready(function(){
 		let password = $("#loginPasswordInput").val();
 		
 		if(loginId == ""){
- 					alert("아이디를 입력하세요");
- 					return ;
- 				}
- 				if(password == ""){
- 					alert("비밀번호를 입력하세요");
- 					return ;
- 				}
- 				
- 				$.ajax({
- 					type:"post"
- 					, url:"/user/login"
- 					, data:{"loginId":loginId,"password":password}
- 					, success:function(data){
- 						if(data.result == "success"){
- 							location.href = "/user/join-view";
- 						}else{
- 							alert("아이디 비밀번호를 확인해 주세요");
- 						}
- 					}
- 					, error:function(){
- 						alert("로그인 과정 에러");
- 					}
- 				});
+			alert("아이디를 입력하세요");
+			return ;
+		}
+		if(password == ""){
+			alert("비밀번호를 입력하세요");
+			return ;
+		}
 		
+		$.ajax({
+			type:"post"
+			, url:"/user/login"
+			, data:{"loginId":loginId,"userPassword":password}
+			, success:function(data){
+				if(data.result == "success"){
+					location.href = "/user/join-view";
+				}else{
+					alert("아이디 비밀번호를 확인해 주세요");
+				}
+			}
+			, error:function(){
+				alert("로그인 과정 에러");
+			}
+		});
+
 		
 	});	
 	
+	/** 관리자 매니저 등록 */
+		
+	$("#managerJoinBtn").on("click",function(){
+		let adminId = $("#adminIdInput").val();
+		let adminName = $("#adminNameInput").val();
+		let adminPassword = $("#adminPasswordInput").val();
+		
+		if(adminId == ""){
+			alert("아이디를 입력하세요");
+			return ;
+		}
+		if(adminName == ""){
+			alert("이름을 입력하세요");
+			return ;
+		}
+		if(adminPassword == ""){
+			alert("비밀번호를 입력하세요");
+			return ;
+		}
+		
+		$.ajax({
+			type: "post"
+			, url:"/admin/join"
+			, data:{"adminId":adminId, "managerName":adminName, "adminPassword":adminPassword}
+			, success:function(data){
+				if(data.result == "success"){
+					location.href = "/admin/login-view";
+				}else{
+					alert("등록 실패!!")
+				}
+			}
+			, error:function(){
+				alert("등록 에러");
+			}
+		});
+	});
+	/** 관리자 매니저 로그인 */
+		$("#loginAdminForm").on("submit", function(e){
+		
+		e.preventDefault();
+				
+		let loginAdminId = $("#loginAdminIdInput").val();
+		let adminPassword = $("#loginAdminPasswordInput").val();
+		
+		if(loginAdminId == ""){
+			alert("아이디를 입력하세요");
+			return ;
+		}
+
+		if(adminPassword == ""){
+			alert("비밀번호를 입력하세요");
+			return ;
+		}
+ 				
+		$.ajax({
+			type:"post"
+			, url:"/admin/login"
+			, data:{"adminId":loginAdminId,"adminPassword":adminPassword}
+			, success:function(data){
+				if(data.result == "success"){
+					location.href = "/admin/join-view";
+				}else{
+					alert("관리자 아이디 비밀번호를 확인해 주세요");
+				}
+			}
+			, error:function(){
+				alert("관리자 진입 에러");
+			}
+		});
+		
+		
+	});	
 });

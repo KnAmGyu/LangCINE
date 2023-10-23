@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.uilangage.langcine.admin.manager.repository.ManagerRepository">
+  
+  	  <select id="selectManager" resultType="com.uilangage.langcine.admin.manager.domain.Manager">
+  		SELECT 
+			`id`
+			, `adminId`
+			, `managerName`
+			, `adminPassword`
+			, `createdAt`
+		FROM 
+			`manager`
+		WHERE 
+			`adminId` = #{adminId}
+			AND
+			`adminPassword` = #{adminPassword}
+  	</select>
+  
+  
+  	<insert id="addManager" parameterType="map">
+		INSERT INTO 
+			`manager`
+		(
+			`adminId`
+			, `managerName`
+			, `adminPassword`
+		)	
+		VALUE
+		(
+			#{adminId}
+			, #{managerName}
+			, #{adminPassword}
+		)
+	</insert>
+  
+  </mapper>
