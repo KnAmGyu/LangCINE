@@ -14,10 +14,7 @@ public class ManagerController {
 		return "admin/manager/login";
 	}
 	
-	@GetMapping("/movie-view")
-	public String movieInput(){
-		return "admin/manager/movie-input";
-	}	
+
 	
 	@GetMapping("/main-view")
 	public String mainInput(){
