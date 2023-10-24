@@ -26,3 +26,13 @@
 .movie-list thead th{ background-color: #ddd; font-size: 20px; text-align: center; padding: 8px 0;}
 .movie-list tbody tr{ border-bottom: 1px solid #ddd; }
 .movie-list tbody td{ text-align: center; font-size: 16px; padding: 6px 0; }
+
+.input-table{ width:100%; }
+.input-table tr {border-bottom:1px solid #252525;  }
+.input-table tr td{ padding:10px; border-left: 1px solid #252525; }
+
+
+#inputDelete{ display:none; }
+.btn-wrap{margin-top:8px; display:flex; }
+.btn-wrap button + button {margin-left:4px;}
+.contents-input{ width:400px; height:300px; }
