@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileManager {
 
 	// 상수 
-	public final static String FILE_UPLOAD_PATH = "C:\\information1278\\springproject\\upload\\memo";
+	public final static String FILE_UPLOAD_PATH = "D:\\information1278\\langcineproject\\upload\\langcine";
 	
 	
 	// file을 특정 디렉토리(폴더)에 저장하고,
@@ -60,7 +60,7 @@ public class FileManager {
 		}
 		
 		// 클라이언트에서 접근가능한 url 규칙을 만들고 해당 문자열을 리턴
-		// 파일 경로 : D:\\information1278\\springproject\\upload\\memo/2_239483930/test.png
+		// 파일 경로 : D:\\information1278\\langcineproject\\upload\\langcine/2_239483930/test.png
 		// 경로 규칙 : /images/2_239483930/test.png
 		
 		return "/images" + directoryName + "/" + file.getOriginalFilename();

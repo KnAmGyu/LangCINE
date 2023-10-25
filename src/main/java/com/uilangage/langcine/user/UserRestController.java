@@ -5,8 +5,11 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,6 +20,7 @@ import com.uilangage.langcine.user.service.UserService;
 
 @RequestMapping("/user")
 @RestController
+@Validated
 public class UserRestController {
 
 	@Autowired
@@ -48,10 +52,10 @@ public class UserRestController {
 	
 	@PostMapping("/join")
 	public Map<String, String> join(
-			@RequestParam("loginId") String loginId
+			@Size(min=4, max=16) @RequestParam("loginId") String loginId
 			, @RequestParam("userPassword") String userPassword
 			, @RequestParam("userName") String userName
-			, @RequestParam("email") String email
+			, @Email @RequestParam("email") String email
 			, @RequestParam("phoneNumber") String phoneNumber){
 		
 		int count = userService.addUser(loginId, userPassword, userName, email, phoneNumber);

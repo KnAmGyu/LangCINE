@@ -83,7 +83,7 @@
 							<td>
 								<div id="starWrap">
 									<div class="star-wrap">
-										<input type="text" id="starInput" placeholder="출연" >
+										<input type="text" id="starInput0" placeholder="출연" >
 									</div>
 										
 								</div>
@@ -114,7 +114,7 @@
 							<th>개봉일</th>
 							<td>
 								<div>
-									<input type="text" id="openDayInput"  placeholder="개봉일" >
+									<input type="text" id="openDayInput"   placeholder="개봉일" >
 								</div>
 							</td>
 						</tr>
@@ -138,5 +138,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="/static/js/admin-motion.js"></script>	
+<script src="/static/js/admin-script.js"></script>	
 </body>
 </html>

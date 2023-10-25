@@ -25,4 +25,8 @@ $(document).ready(function(){
 	}
    	
   });
+  
+  $("#openDayInput").datepicker({
+		dateFormat:"yy년mm월dd일"
+	});
 });   
