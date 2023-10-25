@@ -23,6 +23,8 @@
 		 
 		 console.log(thumb);
 
+			
+
 		 
 	 	 let formData = new FormData();
 				formData.append("movieName", movieName);
