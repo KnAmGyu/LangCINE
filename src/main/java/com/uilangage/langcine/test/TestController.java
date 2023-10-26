@@ -1,11 +1,11 @@
 package com.uilangage.langcine.test;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,9 +18,9 @@ public class TestController {
 	@Autowired
 	private TestService testService;
 	
-	@RequestMapping("/create");
+	@PostMapping("/create");
 	public Map<String, String> createTest(
-			@RequestParam(value="test[]") List<String> test)
+			@RequestParam(value="test[]") List<String> test
 			){
 		int count =  testService.addTest(test);
 		Map<String, String> resultMap = new HashMap<>();
