@@ -38,7 +38,7 @@
 					</tbody>
 				</table>
 				<div>
-					<a href="#" type="button" class="btn btn-secondary">영화업로드</a>
+					<a href="/admin/movie-view" type="button" class="btn btn-secondary">영화업로드</a>
 				</div>
 			</div>
 		</div>

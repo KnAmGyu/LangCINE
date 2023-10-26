@@ -5,11 +5,12 @@
  $(document).ready(function(){
 	 $("#movieSaveBtn").on("click",function(){
 		 
+
 		 let movieName = $("#movieNameInput").val();
-		 let thumb = $("thumbInput")[0];
-		 let movieInfo = $("movieInfoInput")[0];
-		 let visual = $("visualInput")[0];
-		 let banner = $("bannerInput")[0];
+		 let thumb = $("#thumbInput")[0];
+ 		 let movieInfo = $("#movieInfoInput")[0];
+		 let visual = $("#visualInput")[0];
+		 let banner = $("#bannerInput")[0];
 		 let genre = $("#genreInput").val();
 		 let diretor = $("#diretorInput").val();
 		 
@@ -21,7 +22,6 @@
 		 let runningTime = $("#runningTimeInput").val();
 		 let openDay =  $.datepicker.formatDate("yy-mm-dd",$("#openDayInput").datepicker("getDate")); 
 		 
-		 console.log(thumb);
 
 			
 
@@ -41,14 +41,14 @@
 		
 		$.ajax({
 				type:"post"
-				, url:"/admin/create"
+				, url:"/admin/createMovie"
 				, data:formData
 				, enctype:"multipart/form-data"  // 파일 업로드 필수 옵션
 				, processData:false  // 파일 업로드 필수 옵션
 				, contentType:false   // 파일 업로드 필수 옵션
 				, success:function(data){
 					if(data.result == "success"){
-						location.href = "/admin/main-view";
+						alert("111");
 					}else{
 						alert("되긴함");
 					}

@@ -1,27 +1,26 @@
 package com.uilangage.langcine.admin.movie;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.uilangage.langcine.admin.movie.service.MovieService;
 
-@RequestMapping("/admin")
 @RestController
 public class MovieRestController {
 
 	@Autowired
 	private MovieService movieService;
 	
-	@PostMapping("/create")
+	@PostMapping("/admin/createMovie")
 	public Map<String, String> createMovie(
 			@RequestParam("movieName") String movieName
 			, @RequestParam(value="thumbImage", required=false) MultipartFile thumbImage
@@ -30,7 +29,7 @@ public class MovieRestController {
 			, @RequestParam(value="bannerImage", required=false) MultipartFile bannerImage
 			, @RequestParam("genre") String genre
 			, @RequestParam("director") String director
-			, @RequestParam("star") String star
+			, @RequestParam(value="star[]") List<String> star
 			, @RequestParam("story") String story
 			, @RequestParam("runningTime") int runningTime
 			, @RequestParam("openDay") String openDay

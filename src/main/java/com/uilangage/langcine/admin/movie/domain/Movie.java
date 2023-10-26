@@ -1,5 +1,6 @@
 package com.uilangage.langcine.admin.movie.domain;
 
+import java.sql.Array;
 import java.sql.Date;
 
 
@@ -14,7 +15,7 @@ public class Movie {
 	private String bannerImage;
 	private String genre;
 	private String director;
-	private String star;
+	private Array[] star;
 	private String story;
 	private int runningTime;
 	private Date openDay;
@@ -68,10 +69,10 @@ public class Movie {
 	public void setDirector(String director) {
 		this.director = director;
 	}
-	public String getStar() {
+	public Array[] getStar() {
 		return star;
 	}
-	public void setStar(String star) {
+	public void setStar(Array[] star) {
 		this.star = star;
 	}
 	public String getStory() {
@@ -104,7 +105,6 @@ public class Movie {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
 	
 	
 }

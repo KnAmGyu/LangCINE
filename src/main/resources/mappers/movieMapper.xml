@@ -6,35 +6,37 @@
   
   <mapper namespace="com.uilangage.langcine.admin.movie.repository.MovieRepository">
   <insert id="insertMovie" parameterType="map">
-	INSERT INTO
-  			`movie`
+  	INSERT INTO 
+  		`movie` 
   		(
   			`movieName`
-			, `thumbImage`
-			, `movieInfoImage`
-			, `visualImage`
-			, `bannerImage`
-			, `genre`
-			, `director`
-			, `star`
-			, `story`
-			, `runningTime`
-			, `openDay`
-  		)
-  		VALUE
-  		(
-  			#{movieName}
+  			, `thumbImage`
+  			, `movieInfoImage`
+  			, `visualImage`
+  			, `bannerImage`
+  			, `genre`
+  			, `director`
+  			, `star`
+  			, `story`
+  			, `runningTime`
+  			, `openDay`
+		) 
+	VALUES
+		(
+			#{movieName}
 			, #{thumbImage}
 			, #{movieInfoImage}
 			, #{visualImage}
 			, #{bannerImage}
 			, #{genre}
 			, #{director}
-			, #{star}
+			, <foreach collection="array" item="star" open="(" close=")" separator=",">
+				 #{star}
+				</foreach>
 			, #{story}
 			, #{runningTime}
 			, #{openDay}
-  		)
+		)
 
   </insert>
   </mapper>

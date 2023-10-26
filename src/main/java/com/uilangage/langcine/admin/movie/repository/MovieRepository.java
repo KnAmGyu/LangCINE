@@ -1,5 +1,7 @@
 package com.uilangage.langcine.admin.movie.repository;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -17,7 +19,7 @@ public interface MovieRepository {
 			, @Param("bannerImage") String bannerImage
 			, @Param("genre") String genre
 			, @Param("director") String director
-			, @Param("star") String star
+			, @Param("star") List<String> star
 			, @Param("story") String story
 			, @Param("runningTime") int runningTime
 			, @Param("openDay") String openDay);

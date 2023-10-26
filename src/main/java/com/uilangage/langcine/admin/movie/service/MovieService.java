@@ -1,5 +1,7 @@
 package com.uilangage.langcine.admin.movie.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,7 +24,7 @@ public class MovieService {
 			, MultipartFile bannerImage
 			, String genre
 			, String director
-			, String star
+			, List<String> star
 			, String story
 			, int runningTime
 			, String openDay){
