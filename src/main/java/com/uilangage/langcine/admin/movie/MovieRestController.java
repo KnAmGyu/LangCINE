@@ -1,7 +1,6 @@
 package com.uilangage.langcine.admin.movie;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -20,7 +19,7 @@ public class MovieRestController {
 	@Autowired
 	private MovieService movieService;
 	
-	@PostMapping("/admin/createMovie")
+	@PostMapping("/movie/create")
 	public Map<String, String> createMovie(
 			@RequestParam("movieName") String movieName
 			, @RequestParam(value="thumbImage", required=false) MultipartFile thumbImage
@@ -29,15 +28,15 @@ public class MovieRestController {
 			, @RequestParam(value="bannerImage", required=false) MultipartFile bannerImage
 			, @RequestParam("genre") String genre
 			, @RequestParam("director") String director
-			, @RequestParam(value="star[]") List<String> star
+			, @RequestParam("star") String star
 			, @RequestParam("story") String story
 			, @RequestParam("runningTime") int runningTime
 			, @RequestParam("openDay") String openDay
 			, HttpSession session){
 		
-		int userId = (Integer)session.getAttribute("userId");
+		int managerId = (Integer)session.getAttribute("managerId");
 		
-		int count = movieService.addMovie(userId, movieName, thumbImage, movieInfoImage, visualImage, bannerImage, genre, director, star, story, runningTime, openDay);
+		int count = movieService.addMovie(managerId, movieName, thumbImage, movieInfoImage, visualImage, bannerImage, genre, director, star, story, runningTime, openDay);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		

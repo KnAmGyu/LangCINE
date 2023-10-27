@@ -5,6 +5,28 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.uilangage.langcine.admin.movie.repository.MovieRepository">
+  <select id="getMovie" resultType="com.uilangage.langcine.admin.movie.domain.Movie">
+  	SELECT 
+			`id`
+			, `movieName`
+  			, `thumbImage`
+  			, `movieInfoImage`
+  			, `visualImage`
+  			, `bannerImage`
+  			, `genre`
+  			, `director`
+  			, `star`
+  			, `story`
+  			, `runningTime`
+  			, `openDay`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`movie`
+		ORDER BY 
+			`id` DESC
+  </select>
+  
   <insert id="insertMovie" parameterType="map">
   	INSERT INTO 
   		`movie` 
@@ -30,9 +52,7 @@
 			, #{bannerImage}
 			, #{genre}
 			, #{director}
-			, <foreach collection="array" item="star" open="(" close=")" separator=",">
-				 #{star}
-				</foreach>
+			, #{star}
 			, #{story}
 			, #{runningTime}
 			, #{openDay}

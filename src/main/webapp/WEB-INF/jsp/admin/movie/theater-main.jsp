@@ -16,30 +16,27 @@
 		<div id="content-section">
 			<c:import url="/WEB-INF/jsp/admin/include/left-side.jsp" />
 			<div class="contents">
-				<table class="movie-list">
+				<table class="theater-list">
 				<colgroup>
-					<col style="width:10%">
-					<col style="width:60%">
-					<col style="width:30%">
+					<col style="width:20%">
+					<col style="width:80%">
+					
 				</colgroup>
 					<thead>
 						<tr>
-							<th>NO.</th>
+							<th>상영관</th>
 							<th>영화제목</th>
-							<th>작성일</th>
+							
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>1</td>
-							<td></td>
-							<td></td>
+							<th>1관</th>
+							<td>테스트</td>
 						</tr>
 					</tbody>
 				</table>
-				<div>
-					<a href="/admin/movie-view" type="button" class="btn btn-secondary">영화업로드</a>
-				</div>
+				
 			</div>
 		</div>
 		<c:import url="/WEB-INF/jsp/admin/include/footer.jsp" />

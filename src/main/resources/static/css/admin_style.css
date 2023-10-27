@@ -5,7 +5,8 @@
 	margin:0 auto;
 	height: 700px;
 }
-
+a{ color:#000; }
+a:hover{ text-decoration: none; color:#000; }
 .content > .input-box {
 	width:400px;
 }

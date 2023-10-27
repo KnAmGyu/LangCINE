@@ -15,7 +15,7 @@ public class Movie {
 	private String bannerImage;
 	private String genre;
 	private String director;
-	private Array[] star;
+	private String star;
 	private String story;
 	private int runningTime;
 	private Date openDay;
@@ -69,10 +69,10 @@ public class Movie {
 	public void setDirector(String director) {
 		this.director = director;
 	}
-	public Array[] getStar() {
+	public String getStar() {
 		return star;
 	}
-	public void setStar(Array[] star) {
+	public void setStar(String star) {
 		this.star = star;
 	}
 	public String getStory() {
@@ -105,6 +105,5 @@ public class Movie {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
 	
 }
