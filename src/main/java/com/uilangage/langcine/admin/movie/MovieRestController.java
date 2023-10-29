@@ -19,6 +19,15 @@ public class MovieRestController {
 	@Autowired
 	private MovieService movieService;
 	
+	@PostMapping("movie/screen")
+	public Map<String, String> screeningMovie(
+			@RequestParam("movieNumber")int movieNumber
+			){
+		
+		
+	}
+	
+	
 	@PostMapping("/movie/create")
 	public Map<String, String> createMovie(
 			@RequestParam("movieName") String movieName
