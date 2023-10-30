@@ -17,6 +17,9 @@ public class MovieService {
 	@Autowired
 	private MovieRepository movieRepository;
 	
+	public int getRunningTime(int id) {
+		return movieRepository.getRunnigTime(id);
+	}
 	
 	public List<Movie> getMovie(){
 		return movieRepository.getMovie(); 

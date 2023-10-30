@@ -1,6 +1,7 @@
 package com.uilangage.langcine.admin.movie;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -18,6 +19,8 @@ public class MovieRestController {
 
 	@Autowired
 	private MovieService movieService;
+
+	
 	
 	@PostMapping("movie/screen")
 	public Map<String, String> screeningMovie(

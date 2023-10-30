@@ -5,6 +5,16 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.uilangage.langcine.admin.movie.repository.MovieRepository">
+  
+  <select id="getRunnigTime" parameterType="int" 
+   resultType="com.uilangage.langcine.admin.movie.domain.Movie">
+	SELECT
+		`runningTime`
+	FROM
+		`movie`
+	WHERE
+		`id` = #{id}		  
+  </select>
   <select id="getMovie" resultType="com.uilangage.langcine.admin.movie.domain.Movie">
   	SELECT 
 			`id`
