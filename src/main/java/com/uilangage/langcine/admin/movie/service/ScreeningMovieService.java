@@ -22,22 +22,16 @@ public class ScreeningMovieService {
 	
 		
 		List<String> movieTimeList = CalculateTime.createMovieTime(movieNumber);
-		for(int i = 0; i < movieTimeList.size(); i++) {
+		
+		for(String time:movieTimeList) {
 			ScreeningMovieDetail screenMoive = ScreeningMovieDetail.builder()
 											.theaterId(theaterNumber)
 											.movieId(movieNumber)
-											.movieTime(movieTimeList[i + 1])
+											.movieTime(time)
 											.build();
+			return screeningMovieRepository.save(screenMoive);
 		}
-		
-//		for(String time:movieTimeList) {
-//			ScreeningMovieDetail screenMoive = ScreeningMovieDetail.builder()
-//											.theaterId(theaterNumber)
-//											.movieId(movieNumber)
-//											.movieTime(time)
-//											.build();
-//			ScreeningMovieRepository.save(screenMoive);
-//		}
+		return null;
 		
 		
 	}
