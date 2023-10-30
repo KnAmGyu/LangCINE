@@ -21,7 +21,8 @@ public class MovieRestController {
 	
 	@PostMapping("movie/screen")
 	public Map<String, String> screeningMovie(
-			@RequestParam("movieNumber")int movieNumber
+			@RequestParam("theaterNumber") int theaterNumber
+			, @RequestParam("movieNumber")int movieNumber
 			){
 		
 		

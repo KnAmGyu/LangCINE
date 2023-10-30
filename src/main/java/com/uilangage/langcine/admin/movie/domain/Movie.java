@@ -1,6 +1,5 @@
 package com.uilangage.langcine.admin.movie.domain;
 
-import java.sql.Array;
 import java.sql.Date;
 
 

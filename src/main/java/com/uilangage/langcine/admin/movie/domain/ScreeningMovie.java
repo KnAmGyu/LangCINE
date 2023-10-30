@@ -7,7 +7,7 @@ public class ScreeningMovie {
 	private int id;
 	private int theaterId;
 	private int movieId;
-	private Date movieTime;
+	private String movieTime;
 	private Date createdAt;
 	private Date updatedAt;
 	public int getId() {
@@ -28,10 +28,10 @@ public class ScreeningMovie {
 	public void setMovieId(int movieId) {
 		this.movieId = movieId;
 	}
-	public Date getMovieTime() {
+	public String getMovieTime() {
 		return movieTime;
 	}
-	public void setMovieTime(Date movieTime) {
+	public void setMovieTime(String movieTime) {
 		this.movieTime = movieTime;
 	}
 	public Date getCreatedAt() {
@@ -46,5 +46,7 @@ public class ScreeningMovie {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	
+	
 	
 }
