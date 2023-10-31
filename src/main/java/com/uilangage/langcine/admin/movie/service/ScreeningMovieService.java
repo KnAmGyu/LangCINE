@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.uilangage.langcine.admin.movie.domain.ScreeningMovie;
 import com.uilangage.langcine.admin.movie.repository.ScreeningMovieRepository;
+import com.uilangage.langcine.test.domain.Test;
 
 @Service
 public class ScreeningMovieService {
@@ -20,7 +21,7 @@ public class ScreeningMovieService {
 	public List<String> createMovieTime(int movieNumber) {
 		int runningTime = movieService.getRunningTime(movieNumber);
 		int oneTime = runningTime + 10;
-		int count = 1020/(oneTime);
+		int count = 1020/(oneTime) + 1;
 		
 		List<String> timeList = new ArrayList<>();
 		int openTime = 540;
@@ -30,7 +31,7 @@ public class ScreeningMovieService {
 			}else {
 				int minuteTime = openTime + (oneTime * i);
 				int hour = minuteTime / 60;
-				if(hour < 24) {
+				if(hour > 24) {
 					hour = hour - 24;
 				}
 				int minute = minuteTime % 60;
@@ -47,16 +48,17 @@ public class ScreeningMovieService {
 		
 		List<String> movieTimeList = createMovieTime(movieNumber);
 		
-		for(String time:movieTimeList) {
+		for(int i = 0; i < movieTimeList.size(); i++ ) {
 			ScreeningMovie screenMoive = ScreeningMovie.builder()
-											.theaterId(theaterNumber)
-											.movieId(movieNumber)
-											.movieTime(time)
-											.build();
+										.theaterId(theaterNumber)
+										.movieId(movieNumber)
+										.movieTime(movieTimeList.get(i))
+										.build();
 			screeningMovieRepository.save(screenMoive);
-			
+
 			return true;
 		}
+			
 		return false;
 		
 		
