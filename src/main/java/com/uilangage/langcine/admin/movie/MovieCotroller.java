@@ -42,5 +42,14 @@ public class MovieCotroller {
 	@GetMapping("/theater-view")
 	public String theater() {
 		return "admin/movie/theater-main";
-		}
 	}
+
+	@GetMapping("/theater-input-view")
+	public String theaterInput() {
+		return "admin/movie/theater-input";
+	}
+
+}
+
+	
+

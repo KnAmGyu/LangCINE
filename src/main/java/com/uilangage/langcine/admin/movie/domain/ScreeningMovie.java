@@ -2,50 +2,47 @@ package com.uilangage.langcine.admin.movie.domain;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.UpdateTimestamp;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Getter
+@Table(name="screening_info")
+@Entity
 public class ScreeningMovie {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
+	@Column(name="theaterId")
 	private int theaterId;
+	
+	@Column(name="movieId")
 	private int movieId;
+	
+	@Column(name="movieTime")
 	private String movieTime;
+	
+	@UpdateTimestamp
+	@Column(name="createdAt", updatable=false)
 	private Date createdAt;
+	@UpdateTimestamp
+	@Column(name="updatedAt")
 	private Date updatedAt;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public int getTheaterId() {
-		return theaterId;
-	}
-	public void setTheaterId(int theaterId) {
-		this.theaterId = theaterId;
-	}
-	public int getMovieId() {
-		return movieId;
-	}
-	public void setMovieId(int movieId) {
-		this.movieId = movieId;
-	}
-	public String getMovieTime() {
-		return movieTime;
-	}
-	public void setMovieTime(String movieTime) {
-		this.movieTime = movieTime;
-	}
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
 	
 	
 	

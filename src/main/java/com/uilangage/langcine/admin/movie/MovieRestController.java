@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.uilangage.langcine.admin.movie.dto.ScreeningMovieDetail;
+import com.uilangage.langcine.admin.movie.domain.ScreeningMovie;
 import com.uilangage.langcine.admin.movie.service.MovieService;
 import com.uilangage.langcine.admin.movie.service.ScreeningMovieService;
 
@@ -25,15 +25,15 @@ public class MovieRestController {
 	private ScreeningMovieService screeningMovieService;
 	
 	
-	@PostMapping("movie/screen")
+	@PostMapping("/movie/screen")
 	public Map<String, String> screeningMovie(
 			@RequestParam("theaterNumber") int theaterNumber
 			, @RequestParam("movieNumber")int movieNumber
 			){
-		ScreeningMovieDetail ScreenMovie = screeningMovieService.addMovieScreen(theaterNumber, movieNumber);
+		boolean ScreenMovie = screeningMovieService.addMovieScreen(theaterNumber, movieNumber);
 		
 		Map<String, String> resultMap = new HashMap<>();
-		if(ScreenMovie != null) {
+		if(ScreenMovie) {
 			resultMap.put("result", "success");
 		}else {
 			resultMap.put("result", "fail");
