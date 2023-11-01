@@ -40,18 +40,21 @@ public class MovieCotroller {
 	
 	
 	@GetMapping("/theater-view")
-	public String theater(Model model) {
+	public String theater() {
 		
 		
-		List<Movie> movieList = movieService.getMovie();
 		
-		model.addAttribute("movie", movieList);
 		
 		return "admin/movie/theater-main";
 	}
 
 	@GetMapping("/theater-input-view")
-	public String theaterInput() {
+	public String theaterInput(Model model) {
+		
+		List<Movie> movieList = movieService.getMovie();
+		
+		model.addAttribute("movie", movieList);
+		
 		return "admin/movie/theater-input";
 	}
 

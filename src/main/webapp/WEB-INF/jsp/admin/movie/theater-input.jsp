@@ -63,8 +63,9 @@
 								<div class="input-box">
 									
 									<select name="movieList" id="movieNumber">
-									    <option value="1">테스트</option>
-									    <option value="2">테스트2</option>
+									<c:forEach var="movie" items="${movie }" >
+									    <option value="${movie.id }">${movie.movieName }</option>
+									</c:forEach>    
 									 </select>
 								</div>
 							</td>
