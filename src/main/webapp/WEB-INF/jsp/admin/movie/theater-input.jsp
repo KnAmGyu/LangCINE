@@ -24,30 +24,44 @@
 			<c:import url="/WEB-INF/jsp/admin/include/left-side.jsp" />
 			<div class="contents">
 				<form id="movieSelectForm">
-				<table>
+				<table class="theater-table">
+				<colgroup>
+					<col style="width:20%">
+					<col style="width:80%">
+				</colgroup>
 					<tbody>
 						<tr>
 							<th>상영관 선택</th>
 							<td>
-								<div>
-									<input type="radio" id="teater1" name="teater" value="1" checked />
-				    				<label for="teater1">1관</label>
-				    				<input type="radio" id="teater2" name="teater" value="2"/>
-				    				<label for="teater2">2관</label>
-				    				<input type="radio" id="teater3" name="teater" value="3"/>
-				    				<label for="teater3">3관</label>
-				    				<input type="radio" id="teater4" name="teater" value="4"/>
-				    				<label for="teater4">4관</label>
-				    				<input type="radio" id="teater5" name="teater" value="5"/>
-				    				<label for="teater5">5관</label>
+								<div class="input-box">
+									<div class="radio-input">
+										<input type="radio" id="theater1" name="theater" value="1"/>
+				    					<label for="theater1">1관</label>
+									</div>
+									<div class="radio-input">
+					    				<input type="radio" id="theater2" name="theater" value="2"/>
+					    				<label for="theater2">2관</label>
+				    				</div>
+				    				<div class="radio-input">
+					    				<input type="radio" id="theater3" name="theater" value="3"/>
+					    				<label for="theater3">3관</label>
+				    				</div>
+				    				<div class="radio-input">
+					    				<input type="radio" id="theater4" name="theater" value="4"/>
+					    				<label for="theater4">4관</label>
+				    				</div>
+				    				<div class="radio-input">
+					    				<input type="radio" id="theater5" name="theater" value="5"/>
+					    				<label for="theater5">5관</label>
+				    				</div>
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<th>영화선택</th>
 							<td>
-								<div>
-									<label for="movieNumber">영화 선택</label>
+								<div class="input-box">
+									
 									<select name="movieList" id="movieNumber">
 									    <option value="1">테스트</option>
 									    <option value="2">테스트2</option>

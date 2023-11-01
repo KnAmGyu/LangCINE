@@ -4,12 +4,13 @@
 
  $(document).ready(function(){
 	 /** 관리자 상영관 영화 설정 */
+	 
+	 
 	 $("#movieSelectForm").on("submit", function(e){	
 				
-				// form 태그가 가진 페이지 이동 기능을 막자
 				e.preventDefault();
 				
-				let theaterNumber = $("input[name=teater]").val();
+				let theaterNumber = $("input[name=theater]:checked").val();
  				let movieNumber = $("select[name=movieList]").val();
  				
  				alert(theaterNumber + "," + movieNumber);
@@ -21,7 +22,7 @@
  					, data:{"theaterNumber":theaterNumber,"movieNumber":movieNumber}
  					, success:function(data){
  						if(data.result == "success"){
- 							alert("성공");
+ 							location.href = "/admin/theater-view";
  						}else{
  							alert("여기까진 옴");
  						}

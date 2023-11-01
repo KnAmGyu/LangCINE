@@ -6,10 +6,20 @@
   
   <mapper namespace="com.uilangage.langcine.admin.movie.repository.MovieRepository">
   
-  <select id="getRunnigTime" parameterType="int" 
+  <select id="getMovieInfo" parameterType="int" 
    resultType="com.uilangage.langcine.admin.movie.domain.Movie">
 	SELECT
-		`runningTime`
+		`movieName`
+		, `thumbImage`
+		, `movieInfoImage`
+		, `visualImage`
+		, `bannerImage`
+		, `genre`
+		, `director`
+		, `star`
+		, `story`
+		, `runningTime`
+		, `openDay`
 	FROM
 		`movie`
 	WHERE

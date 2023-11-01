@@ -40,7 +40,13 @@ public class MovieCotroller {
 	
 	
 	@GetMapping("/theater-view")
-	public String theater() {
+	public String theater(Model model) {
+		
+		
+		List<Movie> movieList = movieService.getMovie();
+		
+		model.addAttribute("movie", movieList);
+		
 		return "admin/movie/theater-main";
 	}
 

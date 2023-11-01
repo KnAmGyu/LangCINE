@@ -12,7 +12,7 @@ import com.uilangage.langcine.admin.movie.domain.Movie;
 public interface MovieRepository {
 
 	
-	public int getRunnigTime(@Param("id") int id);
+	public Movie getMovieInfo(@Param("id") int id);
 	
 	
 	public List<Movie> getMovie();	

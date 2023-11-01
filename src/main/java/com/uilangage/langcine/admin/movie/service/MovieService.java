@@ -18,7 +18,7 @@ public class MovieService {
 	private MovieRepository movieRepository;
 	
 	public int getRunningTime(int id) {
-		return movieRepository.getRunnigTime(id);
+		return movieRepository.getMovieInfo(id).getRunningTime();
 	}
 	
 	public List<Movie> getMovie(){

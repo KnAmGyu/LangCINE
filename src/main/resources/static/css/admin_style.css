@@ -37,3 +37,13 @@ a:hover{ text-decoration: none; color:#000; }
 .btn-wrap{margin-top:8px; display:flex; }
 .btn-wrap button + button {margin-left:4px;}
 .contents-input{ width:400px; height:300px; }
+.theater-table{ width:100%; }
+.theater-table tr{ border-bottom: 1px solid #252525; }
+.theater-table th{ border-right: 1px solid #252525;}
+.theater-table th, td{ padding:12px; }
+.theater-table .input-box{ display:flex; align-items:baseline;}
+
+.theater-table .radio-input + .radio-input{ margin-left:12px;  }
+
+.theater-table select[name=movieList]{ width:280px; height:40px; border-radius: 4px; }
+

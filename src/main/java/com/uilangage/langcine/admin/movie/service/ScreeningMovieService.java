@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.uilangage.langcine.admin.movie.domain.ScreeningMovie;
 import com.uilangage.langcine.admin.movie.repository.ScreeningMovieRepository;
-import com.uilangage.langcine.test.domain.Test;
 
 @Service
 public class ScreeningMovieService {
@@ -30,11 +29,20 @@ public class ScreeningMovieService {
 				timeList.add("09:00");
 			}else {
 				int minuteTime = openTime + (oneTime * i);
-				int hour = minuteTime / 60;
-				if(hour > 24) {
-					hour = hour - 24;
+				int hourNumber = minuteTime / 60;
+				String hour = null;
+				if(hourNumber > 24) {
+					hour = ("0" + (hourNumber - 24));
+				}else {
+					hour = (hourNumber + "");
 				}
-				int minute = minuteTime % 60;
+				int minuteNumber = minuteTime % 60;
+				String minute = null;
+				if(minuteNumber < 10) {
+					minute = ("0" + minuteNumber);
+				}else {
+					minute = (minuteNumber + "");
+				}
 				timeList.add(hour + " : " + minute);
 			}
 		}
@@ -56,10 +64,9 @@ public class ScreeningMovieService {
 										.build();
 			screeningMovieRepository.save(screenMoive);
 
-			return true;
-		}
 			
-		return false;
+		}
+		return true;
 		
 		
 	}
