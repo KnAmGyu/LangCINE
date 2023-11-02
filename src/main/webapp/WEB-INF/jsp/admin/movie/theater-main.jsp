@@ -30,10 +30,12 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:forEach var="admin" items="${admin }" >
 						<tr>
-							<th>1관</th>
-							<td>테스트</td>
+							<th>${admin.theaterNumber }</th>
+							<td>${admin.movieName }</td>
 						</tr>
+					</c:forEach>	
 					</tbody>
 				</table>
 				

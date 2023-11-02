@@ -25,6 +25,29 @@
 	WHERE
 		`id` = #{id}		  
   </select>
+  
+  <select id="getMovieByList" resultType="com.uilangage.langcine.admin.movie.domain.Movie">
+  	SELECT 
+			`id`
+			, `movieName`
+  			, `thumbImage`
+  			, `movieInfoImage`
+  			, `visualImage`
+  			, `bannerImage`
+  			, `genre`
+  			, `director`
+  			, `star`
+  			, `story`
+  			, `runningTime`
+  			, `openDay`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`movie`
+		
+  </select>
+  
+  
   <select id="getMovie" resultType="com.uilangage.langcine.admin.movie.domain.Movie">
   	SELECT 
 			`id`

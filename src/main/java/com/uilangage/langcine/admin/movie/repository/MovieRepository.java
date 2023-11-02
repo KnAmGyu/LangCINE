@@ -17,7 +17,7 @@ public interface MovieRepository {
 	
 	public List<Movie> getMovie();	
 	
-	
+	public List<Movie> getMovieByList();
 	
 	public int insertMovie(
 			@Param("managerId") int managerId

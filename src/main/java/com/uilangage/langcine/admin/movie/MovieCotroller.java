@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.uilangage.langcine.admin.movie.domain.Movie;
+import com.uilangage.langcine.admin.movie.dto.AdminTheaterListDetail;
+import com.uilangage.langcine.admin.movie.service.AdminListService;
 import com.uilangage.langcine.admin.movie.service.MovieService;
 
 @Controller
@@ -17,6 +19,9 @@ public class MovieCotroller {
 
 	@Autowired
 	private MovieService movieService;
+	
+	@Autowired
+	private AdminListService adminListService;
 	
 	
 	@GetMapping("/main-view")
@@ -40,10 +45,11 @@ public class MovieCotroller {
 	
 	
 	@GetMapping("/theater-view")
-	public String theater() {
+	public String theater(Model model) {
 		
+		List<AdminTheaterListDetail> adminList = adminListService.adminListDetail();
 		
-		
+		model.addAttribute("admin", adminList);
 		
 		return "admin/movie/theater-main";
 	}
