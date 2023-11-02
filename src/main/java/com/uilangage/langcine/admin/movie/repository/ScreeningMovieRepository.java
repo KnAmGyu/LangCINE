@@ -11,5 +11,6 @@ import com.uilangage.langcine.admin.movie.domain.ScreeningMovie;
 public interface ScreeningMovieRepository extends JpaRepository<ScreeningMovie, Integer>  {
 
 	
-	public List<ScreeningMovie> findByMovieId(int movieId);
+	public List<ScreeningMovie> findByTheaterIdMovieId(int movieId);
+	
 }

@@ -18,7 +18,7 @@ public class ScreeningMovieService {
 
 	
 	public List<ScreeningMovie> findTheaterIdByMovieId(int movieId) {
-		List<ScreeningMovie> screeningMovie = screeningMovieRepository.findByMovieId(movieId);
+		List<ScreeningMovie> screeningMovie = screeningMovieRepository.findByTheaterIdMovieId(movieId);
 		 return screeningMovie;
 	}
 	

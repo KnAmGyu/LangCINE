@@ -37,8 +37,8 @@ public class AdminListService {
 			
 			AdminTheaterListDetail adminDetail = AdminTheaterListDetail.builder()
 													.id(movie.getId())
-													.theaterNumber(screeningMovie(0).getTheaterId())
-													.movieId(screeningMovie(0).getMovieId())
+													.theaterNumber(screeningMovie.get(0))
+													.movieId(movieNumber)
 													.movieName(movie.getMovieName())
 													.build();
 					
