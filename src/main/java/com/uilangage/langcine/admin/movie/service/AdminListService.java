@@ -33,11 +33,22 @@ public class AdminListService {
 			
 			int movieNumber = movie.getId();
 			
-			List<ScreeningMovie> screeningMovie = screeningMovieService.findTheaterIdByMovieId(movieNumber);
+			int theaterNumber = screeningMovieService.findTheaterIdByMovieId(movieNumber);
+			
+			if(theaterNumber == 0) {
+				AdminTheaterListDetail adminDetail = AdminTheaterListDetail.builder()
+													.id(movie.getId())
+													.theaterNumber(theaterNumber)
+													.movieId(movieNumber)
+													.movieName(movie.getMovieName())
+													.build();
+							
+				//	adminlList.stop(adminDetail);	
+			}
 			
 			AdminTheaterListDetail adminDetail = AdminTheaterListDetail.builder()
 													.id(movie.getId())
-													.theaterNumber(screeningMovie.get(0))
+													.theaterNumber(theaterNumber)
 													.movieId(movieNumber)
 													.movieName(movie.getMovieName())
 													.build();
@@ -50,8 +61,5 @@ public class AdminListService {
 
 
 
-	private ScreeningMovie screeningMovie(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 }

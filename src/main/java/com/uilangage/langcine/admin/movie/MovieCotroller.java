@@ -7,9 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.uilangage.langcine.admin.movie.domain.Movie;
+import com.uilangage.langcine.admin.movie.domain.ScreeningMovie;
 import com.uilangage.langcine.admin.movie.dto.AdminTheaterListDetail;
+import com.uilangage.langcine.admin.movie.repository.ScreeningMovieRepository;
 import com.uilangage.langcine.admin.movie.service.AdminListService;
 import com.uilangage.langcine.admin.movie.service.MovieService;
 
@@ -26,8 +29,7 @@ public class MovieCotroller {
 	
 	@GetMapping("/main-view")
 	public String mainInput(
-			Model model
-			){
+			Model model){
 		
 		
 		List<Movie> movieList =  movieService.getMovie();
@@ -63,6 +65,9 @@ public class MovieCotroller {
 		
 		return "admin/movie/theater-input";
 	}
+	
+
+	
 
 }
 

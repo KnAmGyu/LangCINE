@@ -1,6 +1,8 @@
 package com.uilangage.langcine.admin.movie.dto;
 
 
+import com.uilangage.langcine.admin.movie.domain.ScreeningMovie;
+
 import lombok.Builder;
 import lombok.Getter;
 

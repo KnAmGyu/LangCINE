@@ -17,9 +17,18 @@ public class ScreeningMovieService {
 	private RunningTimeService runningTimeService;
 
 	
-	public List<ScreeningMovie> findTheaterIdByMovieId(int movieId) {
-		List<ScreeningMovie> screeningMovie = screeningMovieRepository.findByTheaterIdMovieId(movieId);
-		 return screeningMovie;
+	
+//	리스트의 형태로 받아온 theaterId를 인덱스 0의 값을 객체로 변환후 int변환하기
+	public int findTheaterIdByMovieId(int movieId) {
+		List<ScreeningMovie> screeningMovie = screeningMovieRepository.findByTheaterIdQuery(movieId);
+//		ScreeningMovie number = screeningMovie.get(0);
+//		int theaterNumber = number.getTheaterId();
+		if(screeningMovie == null) {
+			return 0;
+		}
+		int theaterNumber = screeningMovie.get(0).getTheaterId();
+		
+		return theaterNumber;
 	}
 	
 	
