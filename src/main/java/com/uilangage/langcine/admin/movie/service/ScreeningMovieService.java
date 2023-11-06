@@ -23,8 +23,8 @@ public class ScreeningMovieService {
 		List<ScreeningMovie> screeningMovie = screeningMovieRepository.findByTheaterIdQuery(movieId);
 //		ScreeningMovie number = screeningMovie.get(0);
 //		int theaterNumber = number.getTheaterId();
-		if(screeningMovie == null) {
-			return 0;
+		if(screeningMovie.isEmpty()) {
+			return 6;
 		}
 		int theaterNumber = screeningMovie.get(0).getTheaterId();
 		

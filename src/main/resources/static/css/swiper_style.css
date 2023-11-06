@@ -17,15 +17,15 @@
 
     .swiper {
       width: 100%;
-      height: 740px;
     }
     .thumb-wrap{ padding-top:50px; }
     
-    #thumbSwiper{
+    .thumbSwiper{
 		width:980px;
-		height: 323px;
 	}
-    
+    .thumbSwiper .swiper-slide{ 
+	 	flex-direction: column;
+	 }
 
     .swiper-slide {
       text-align: center;
@@ -36,14 +36,6 @@
       align-items: center;
     }
     
-    .swiper-slide.2{
-		background:#eee;
-	}
-	
-	.swiper-slide.3{
-		background-color: antiquewhite;
-	}
-
     .swiper-slide img {
       display: block;
       width: 100%;

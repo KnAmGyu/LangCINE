@@ -8,36 +8,138 @@
 <title>LangCINE</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="stylesheet" href="/static/css/style.css" type="text/css">\
+<link rel="stylesheet" href="/static/css/style.css" type="text/css">
 <link rel="stylesheet" href="/static/css/swiper_style.css" type="text/css">
 </head>
 <body>
 	<div id="wrap">
-		<c:import url="/WEB-INF/jsp/include/header.jsp" />
+		<c:import url="/WEB-INF/jsp/include/main_header.jsp" />
 		
 		<div id="content-section">
 			<div class="swiper mySwiper">
 			    <div class="swiper-wrapper">
-			      <div class="swiper-slide">Slide 1</div>
-			      <div class="swiper-slide 2">Slide 2</div>
-			      <div class="swiper-slide 3">Slide 3</div>
-			      <div class="swiper-slide 4">Slide 4</div>
-			      <div class="swiper-slide 5">Slide 5</div>
+			      <div class="swiper-slide"><img src="/static/images/DALILAND_1920774.jpg"></div>
+			      <div class="swiper-slide"><img src="/static/images/GoldKingdom_WaterKingdom_1920774.jpg"></div>
+			      <div class="swiper-slide"><img src="/static/images/KillersoftheFlowerMoon_1920774.jpg"></div>
+			      <div class="swiper-slide"><img src="/static/images/KYRIE_1920774.jpg"></div>
+			      <div class="swiper-slide"><img src="/static/images/Quicksand_1920774.jpg"></div>
 			    </div>
 			    <div class="swiper-button-next"></div>
 			    <div class="swiper-button-prev"></div>
 			    <div class="swiper-pagination"></div>
 			</div>
 			<div class="thumb-wrap">
-				<div id="thumbSwiper" class="swiper" >
+				<div id="thumbSwiper" class="swiper thumbSwiper" >
 			 	    <div class="swiper-wrapper">
-				        <div class="swiper-slide">Slide 1</div>
-				        <div class="swiper-slide">Slide 2</div>
-				        <div class="swiper-slide">Slide 3</div>
-				        <div class="swiper-slide">Slide 4</div>
-				        <div class="swiper-slide">Slide 5</div>
-				        <div class="swiper-slide">Slide 6</div>
-				        <div class="swiper-slide">Slide 7</div>
+				        <div class="swiper-slide item-wrap">
+				        	<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+					        		<div class="inner">
+					        			<a href="#" class="btn-thumb">예매하기</a>
+				        				<a href="#" class="btn-thumb">영화정보</a>
+					        		</div>
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>
+			        	</div>
+				        <div class="swiper-slide">
+							<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>	
+						</div>
+				        <div class="swiper-slide">
+				        	<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="top-info">
+				        		<span class="thumb-info">
+				        			<img src="/static/images/20309_101_1.jpg">	
+				        		</span>
+				        		<div class="over-box">
+				        			
+				        		</div>
+				        	</div>
+				        	<div class="bottom-info">
+				        		<strong>
+				        			30일
+				        		</strong>
+				        	</div>
+				        </div>
 			        </div>
 			    </div>
 			</div>	

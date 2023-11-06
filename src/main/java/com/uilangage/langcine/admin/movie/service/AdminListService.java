@@ -29,19 +29,15 @@ public class AdminListService {
 		List<Movie> movieList = movieRepository.getMovieByList();
 		
 		List<AdminTheaterListDetail> adminlList = new ArrayList<>();
+		movieloop:
 		for(Movie movie:movieList) {
 			
 			int movieNumber = movie.getId();
 			
 			int theaterNumber = screeningMovieService.findTheaterIdByMovieId(movieNumber);
 			
-			if(theaterNumber == 0) {
-				AdminTheaterListDetail adminDetail = AdminTheaterListDetail.builder()
-													.id(movie.getId())
-													.theaterNumber(theaterNumber)
-													.movieId(movieNumber)
-													.movieName(movie.getMovieName())
-													.build();
+			if(theaterNumber > 5) {
+				break movieloop;
 							
 				//	adminlList.stop(adminDetail);	
 			}

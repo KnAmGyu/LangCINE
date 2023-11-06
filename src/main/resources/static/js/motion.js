@@ -2,6 +2,18 @@
  * 
  */
 
+$(window).scroll(function () { 
+	var scrollValue = $(document).scrollTop(); 
+	console.log(scrollValue);
+    if(scrollValue >= 90 ){
+		$("#nav").addClass('fixed');
+	}else{
+		$("#nav").removeClass('fixed');
+	}
+});
+
+
+
   var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,
