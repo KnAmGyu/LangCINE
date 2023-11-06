@@ -33,7 +33,6 @@ public class MovieService {
 			int managerId
 			, String movieName
 			, MultipartFile thumbImage
-			, MultipartFile movieInfoImage
 			, MultipartFile visualImage
 			, MultipartFile bannerImage
 			, String genre
@@ -41,15 +40,15 @@ public class MovieService {
 			, String star
 			, String story
 			, int runningTime
-			, String openDay){
+			, String openDay
+			, String exposure){
 		
 		String thumb = FileManager.saveFile(managerId, thumbImage);
-		String movieInfo = FileManager.saveFile(managerId, movieInfoImage);
 		String visual = FileManager.saveFile(managerId, visualImage);
 		String banner = FileManager.saveFile(managerId, bannerImage);
 		
 		
-		return movieRepository.insertMovie(managerId, movieName, thumb, movieInfo, visual, banner, genre, director, star, story, runningTime, openDay);
+		return movieRepository.insertMovie(managerId, movieName, thumb, visual, banner, genre, director, star, story, runningTime, openDay, exposure);
 		
 		
 		

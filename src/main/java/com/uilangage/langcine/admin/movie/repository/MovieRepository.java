@@ -23,7 +23,6 @@ public interface MovieRepository {
 			@Param("managerId") int managerId
 			, @Param("movieName") String movieName
 			, @Param("thumbImage") String thumbImage
-			, @Param("movieInfoImage") String movieInfoImage
 			, @Param("visualImage") String visualImage
 			, @Param("bannerImage") String bannerImage
 			, @Param("genre") String genre
@@ -31,7 +30,8 @@ public interface MovieRepository {
 			, @Param("star") String star
 			, @Param("story") String story
 			, @Param("runningTime") int runningTime
-			, @Param("openDay") String openDay);
+			, @Param("openDay") String openDay
+			, @Param("exposure") String exposure);
 	
 	
 }

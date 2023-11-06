@@ -16,25 +16,22 @@
 		<c:import url="/WEB-INF/jsp/include/main_header.jsp" />
 		
 		<div id="content-section">
-			<div class="swiper mySwiper">
-			    <div class="swiper-wrapper">
-			      <div class="swiper-slide"><img src="/static/images/DALILAND_1920774.jpg"></div>
-			      <div class="swiper-slide"><img src="/static/images/GoldKingdom_WaterKingdom_1920774.jpg"></div>
-			      <div class="swiper-slide"><img src="/static/images/KillersoftheFlowerMoon_1920774.jpg"></div>
-			      <div class="swiper-slide"><img src="/static/images/KYRIE_1920774.jpg"></div>
-			      <div class="swiper-slide"><img src="/static/images/Quicksand_1920774.jpg"></div>
-			    </div>
-			    <div class="swiper-button-next"></div>
-			    <div class="swiper-button-prev"></div>
-			    <div class="swiper-pagination"></div>
-			</div>
-			<div class="thumb-wrap">
+			<c:forEach var="movie" items="${movieList }"  >
+				<div class="swiper mySwiper">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide"><img src="${movie.visualImage }">111</div>
+				    </div>
+				    <div class="swiper-button-next"></div>
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-pagination"></div>
+				</div>
+				<div class="thumb-wrap">
 				<div id="thumbSwiper" class="swiper thumbSwiper" >
 			 	    <div class="swiper-wrapper">
 				        <div class="swiper-slide item-wrap">
 				        	<div class="top-info">
 				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
+				        			<img src="${movie.thumbImage }">	
 				        		</span>
 				        		<div class="over-box">
 					        		<div class="inner">
@@ -50,99 +47,11 @@
 				        		</strong>
 				        	</div>
 			        	</div>
-				        <div class="swiper-slide">
-							<div class="top-info">
-				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
-				        		</span>
-				        		<div class="over-box">
-				        			
-				        		</div>
-				        	</div>
-				        	<div class="bottom-info">
-				        		<strong>
-				        			30일
-				        		</strong>
-				        	</div>	
-						</div>
-				        <div class="swiper-slide">
-				        	<div class="top-info">
-				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
-				        		</span>
-				        		<div class="over-box">
-				        			
-				        		</div>
-				        	</div>
-				        	<div class="bottom-info">
-				        		<strong>
-				        			30일
-				        		</strong>
-				        	</div>
-				        </div>
-				        <div class="swiper-slide">
-				        	<div class="top-info">
-				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
-				        		</span>
-				        		<div class="over-box">
-				        			
-				        		</div>
-				        	</div>
-				        	<div class="bottom-info">
-				        		<strong>
-				        			30일
-				        		</strong>
-				        	</div>
-				        </div>
-				        <div class="swiper-slide">
-				        	<div class="top-info">
-				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
-				        		</span>
-				        		<div class="over-box">
-				        			
-				        		</div>
-				        	</div>
-				        	<div class="bottom-info">
-				        		<strong>
-				        			30일
-				        		</strong>
-				        	</div>
-				        </div>
-				        <div class="swiper-slide">
-				        	<div class="top-info">
-				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
-				        		</span>
-				        		<div class="over-box">
-				        			
-				        		</div>
-				        	</div>
-				        	<div class="bottom-info">
-				        		<strong>
-				        			30일
-				        		</strong>
-				        	</div>
-				        </div>
-				        <div class="swiper-slide">
-				        	<div class="top-info">
-				        		<span class="thumb-info">
-				        			<img src="/static/images/20309_101_1.jpg">	
-				        		</span>
-				        		<div class="over-box">
-				        			
-				        		</div>
-				        	</div>
-				        	<div class="bottom-info">
-				        		<strong>
-				        			30일
-				        		</strong>
-				        	</div>
-				        </div>
 			        </div>
 			    </div>
-			</div>	
+			</div>
+			</c:forEach>	
+		</div>
 		<c:import url="/WEB-INF/jsp/include/footer.jsp" />
 	</div>
 

@@ -42,7 +42,6 @@
 
 		 let movieName = $("#movieNameInput").val();
 		 let thumb = $("#thumbInput")[0];
- 		 let movieInfo = $("#movieInfoInput")[0];
 		 let visual = $("#visualInput")[0];
 		 let banner = $("#bannerInput")[0];
 		 let genre = $("#genreInput").val();
@@ -60,14 +59,13 @@
  		 let story = $("#storyInput").val();
 		 let runningTime = $("#runningTimeInput").val();
 		 let openDay =  $.datepicker.formatDate("yy-mm-dd",$("#openDayInput").datepicker("getDate")); 
-		 
+		 let exposure = $("input[name=exposure]:checked").val();
 
 			
 
 	 	 let formData = new FormData();
 				formData.append("movieName", movieName);
 				formData.append("thumbImage", thumb.files[0]);
-				formData.append("movieInfoImage", movieInfo.files[0]);
 				formData.append("visualImage", visual.files[0]);
 				formData.append("bannerImage", banner.files[0]);
 				formData.append("genre", genre);
@@ -76,6 +74,7 @@
 				formData.append("story", story);
 				formData.append("runningTime", runningTime);
 				formData.append("openDay", openDay);
+				formData.append("exposure", exposure);
 		
 		$.ajax({
 				type:"post"

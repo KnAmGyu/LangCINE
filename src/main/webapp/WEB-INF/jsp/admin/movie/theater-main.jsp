@@ -38,7 +38,9 @@
 					</c:forEach>	
 					</tbody>
 				</table>
-				
+				<div>
+					<a href="/admin/theater-input-view" type="button" class="btn btn-secondary">영화관 설정하기</a>
+				</div>
 			</div>
 		</div>
 		<c:import url="/WEB-INF/jsp/admin/include/footer.jsp" />

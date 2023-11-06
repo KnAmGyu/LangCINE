@@ -38,7 +38,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>썸네일이미지</th>
+							<th><div>썸네일이미지</div><span>(184 * 263)</span></th>
 							<td>
 								<div>
 									<input type="file" id="thumbInput">
@@ -46,7 +46,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>영화설명이미지</th>
+							<th><div>영화설명이미지</div><span>(316 * 451)</span></th>
 							<td>
 								<div>
 									<input type="file" id="movieInfoInput">
@@ -54,7 +54,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>비주얼이미지</th>
+							<th><div>비주얼이미지</div><span>(1920 * 774)</span></th>
 							<td>
 								<div>
 									<input type="file" id="visualInput">
@@ -62,7 +62,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>영화배너이미지</th>
+							<th><div>영화배너이미지</div><span>(1920 * 420)</span></th>
 							<td>
 								<div>
 									<input type="file" id="bannerInput">
@@ -122,6 +122,21 @@
 							<td>
 								<div>
 									<input type="text" id="openDayInput"   placeholder="개봉일" >
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>노출여부</th>
+							<td>
+								<div>
+									<div class="radio-input">
+										<input type="radio" id="exposure" name="exposure" value="Y"/>
+				    					<label for="exposure">노출</label>
+									</div>
+									<div class="radio-input">
+					    				<input type="radio" id="nonExposure" name="exposure" value="N"/>
+					    				<label for="nonExposure">미노출</label>
+				    				</div>
 								</div>
 							</td>
 						</tr>

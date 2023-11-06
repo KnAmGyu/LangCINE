@@ -11,7 +11,6 @@
 	SELECT
 		`movieName`
 		, `thumbImage`
-		, `movieInfoImage`
 		, `visualImage`
 		, `bannerImage`
 		, `genre`
@@ -20,6 +19,7 @@
 		, `story`
 		, `runningTime`
 		, `openDay`
+		, `exposure`
 	FROM
 		`movie`
 	WHERE
@@ -31,7 +31,6 @@
 			`id`
 			, `movieName`
   			, `thumbImage`
-  			, `movieInfoImage`
   			, `visualImage`
   			, `bannerImage`
   			, `genre`
@@ -40,6 +39,7 @@
   			, `story`
   			, `runningTime`
   			, `openDay`
+  			, `exposure`
 			, `createdAt`
 			, `updatedAt`
 		FROM 
@@ -53,7 +53,6 @@
 			`id`
 			, `movieName`
   			, `thumbImage`
-  			, `movieInfoImage`
   			, `visualImage`
   			, `bannerImage`
   			, `genre`
@@ -76,7 +75,6 @@
   		(
   			`movieName`
   			, `thumbImage`
-  			, `movieInfoImage`
   			, `visualImage`
   			, `bannerImage`
   			, `genre`
@@ -85,12 +83,12 @@
   			, `story`
   			, `runningTime`
   			, `openDay`
+  			, `exposure`
 		) 
 	VALUES
 		(
 			#{movieName}
 			, #{thumbImage}
-			, #{movieInfoImage}
 			, #{visualImage}
 			, #{bannerImage}
 			, #{genre}
@@ -99,6 +97,7 @@
 			, #{story}
 			, #{runningTime}
 			, #{openDay}
+			, #{exposure}
 		)
 
   </insert>

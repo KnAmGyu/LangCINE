@@ -48,7 +48,6 @@ public class MovieRestController {
 	public Map<String, String> createMovie(
 			@RequestParam("movieName") String movieName
 			, @RequestParam(value="thumbImage", required=false) MultipartFile thumbImage
-			, @RequestParam(value="movieInfoImage", required=false) MultipartFile movieInfoImage
 			, @RequestParam(value="visualImage", required=false) MultipartFile visualImage
 			, @RequestParam(value="bannerImage", required=false) MultipartFile bannerImage
 			, @RequestParam("genre") String genre
@@ -57,11 +56,12 @@ public class MovieRestController {
 			, @RequestParam("story") String story
 			, @RequestParam("runningTime") int runningTime
 			, @RequestParam("openDay") String openDay
+			, @RequestParam("exposure") String exposure
 			, HttpSession session){
 		
 		int managerId = (Integer)session.getAttribute("managerId");
 		
-		int count = movieService.addMovie(managerId, movieName, thumbImage, movieInfoImage, visualImage, bannerImage, genre, director, star, story, runningTime, openDay);
+		int count = movieService.addMovie(managerId, movieName, thumbImage, visualImage, bannerImage, genre, director, star, story, runningTime, openDay, exposure);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		

@@ -9,7 +9,6 @@ public class Movie {
 	private int id;
 	private String movieName;
 	private String thumbImage;
-	private String movieInfoImage;
 	private String visualImage;
 	private String bannerImage;
 	private String genre;
@@ -18,6 +17,7 @@ public class Movie {
 	private String story;
 	private int runningTime;
 	private Date openDay;
+	private String exposure;
 	private Date createdAt;
 	private Date updatedAt;
 	public int getId() {
@@ -37,12 +37,6 @@ public class Movie {
 	}
 	public void setThumbImage(String thumbImage) {
 		this.thumbImage = thumbImage;
-	}
-	public String getMovieInfoImage() {
-		return movieInfoImage;
-	}
-	public void setMovieInfoImage(String movieInfoImage) {
-		this.movieInfoImage = movieInfoImage;
 	}
 	public String getVisualImage() {
 		return visualImage;
@@ -91,6 +85,12 @@ public class Movie {
 	}
 	public void setOpenDay(Date openDay) {
 		this.openDay = openDay;
+	}
+	public String getExposure() {
+		return exposure;
+	}
+	public void setExposure(String exposure) {
+		this.exposure = exposure;
 	}
 	public Date getCreatedAt() {
 		return createdAt;
