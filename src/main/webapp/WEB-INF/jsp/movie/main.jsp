@@ -28,7 +28,7 @@
 				    <div class="swiper-button-prev"></div>
 				    <div class="swiper-pagination"></div>
 				</div>
-				<div class="thumb-wrap">
+				<div class="thumb-wrap main">
 				<div id="thumbSwiper" class="swiper thumbSwiper" >
 			 	    <div class="swiper-wrapper">
 			 	    	<c:forEach var="movie" items="${movie }"  >
@@ -46,8 +46,8 @@
 				        		</div>
 				        	</div>
 				        	<div class="bottom-info">
-				        	${fn:substring(movie.movieName, 0 ,8) }
 				        		<strong>
+				        		${fn:substring(movie.movieName, 0 ,12) }
 				        		<c:if test="${(fn:length(movie.movieName) ) gt 12 }">
 									...
 								</c:if>

@@ -48,7 +48,7 @@
 					        	</div>
 					        	<div class="bottom-info">
 					        		<strong>
-					        			${fn:substring(movie.movieName, 0 ,8) }
+					        			${fn:substring(movie.movieName, 0 ,12) }
 						        		<c:if test="${(fn:length(movie.movieName) ) gt 12 }">
 											...
 										</c:if>
