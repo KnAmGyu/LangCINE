@@ -59,7 +59,7 @@ public class MovieCotroller {
 	@GetMapping("/theater-input-view")
 	public String theaterInput(Model model) {
 		
-		List<Movie> movieList = movieService.getMovie();
+		List<Movie> movieList = movieService.getMovieByExposure();
 		
 		model.addAttribute("movie", movieList);
 		

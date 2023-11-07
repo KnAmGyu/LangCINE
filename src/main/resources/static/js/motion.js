@@ -4,7 +4,6 @@
 
 $(window).scroll(function () { 
 	var scrollValue = $(document).scrollTop(); 
-	console.log(scrollValue);
     if(scrollValue >= 90 ){
 		$("#nav").addClass('fixed');
 	}else{

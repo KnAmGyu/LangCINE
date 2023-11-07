@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>      
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>     
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>LangCINE</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/static/css/style.css" type="text/css">
 <link rel="stylesheet" href="/static/css/swiper_style.css" type="text/css">
 </head>
@@ -16,10 +17,12 @@
 		<c:import url="/WEB-INF/jsp/include/main_header.jsp" />
 		
 		<div id="content-section">
-			<c:forEach var="movie" items="${movieList }"  >
+			
 				<div class="swiper mySwiper">
 				    <div class="swiper-wrapper">
-				      <div class="swiper-slide"><img src="${movie.visualImage }">111</div>
+				    <c:forEach var="movie" items="${movie }"  >
+				      <div class="swiper-slide"><img src="${movie.visualImage }"></div>
+			      	</c:forEach>
 				    </div>
 				    <div class="swiper-button-next"></div>
 				    <div class="swiper-button-prev"></div>
@@ -28,6 +31,7 @@
 				<div class="thumb-wrap">
 				<div id="thumbSwiper" class="swiper thumbSwiper" >
 			 	    <div class="swiper-wrapper">
+			 	    	<c:forEach var="movie" items="${movie }"  >
 				        <div class="swiper-slide item-wrap">
 				        	<div class="top-info">
 				        		<span class="thumb-info">
@@ -42,15 +46,19 @@
 				        		</div>
 				        	</div>
 				        	<div class="bottom-info">
+				        	${fn:substring(movie.movieName, 0 ,8) }
 				        		<strong>
-				        			30일
+				        		<c:if test="${(fn:length(movie.movieName) ) gt 12 }">
+									...
+								</c:if>
 				        		</strong>
 				        	</div>
 			        	</div>
+			        	</c:forEach>
 			        </div>
 			    </div>
 			</div>
-			</c:forEach>	
+				
 		</div>
 		<c:import url="/WEB-INF/jsp/include/footer.jsp" />
 	</div>

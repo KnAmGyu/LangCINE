@@ -45,14 +45,14 @@
 								</div>
 							</td>
 						</tr>
-						<tr>
+				<!-- 	<tr>
 							<th><div>영화설명이미지</div><span>(316 * 451)</span></th>
 							<td>
 								<div>
 									<input type="file" id="movieInfoInput">
 								</div>
 							</td>
-						</tr>
+						</tr> 	-->
 						<tr>
 							<th><div>비주얼이미지</div><span>(1920 * 774)</span></th>
 							<td>

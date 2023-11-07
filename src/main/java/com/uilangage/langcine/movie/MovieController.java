@@ -18,12 +18,23 @@ public class MovieController {
 	@Autowired
 	private MovieService movieService;
 	
+	@GetMapping("/info-view")
+	public String infoView(Model model) {
+		
+		
+		List<Movie> movieList = movieService.getMovieByExposure();
+		
+		model.addAttribute("movie", movieList);
+		
+		return "movie/info";
+	}
+	
 	
 	@GetMapping("/main-view")
 	public String mainView(Model model) {
 		
 		
-		List<Movie> movieList = movieService.getMovie();
+		List<Movie> movieList = movieService.getMovieByExposure();
 		
 		model.addAttribute("movie", movieList);
 		

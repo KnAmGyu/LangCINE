@@ -26,6 +26,10 @@ public class MovieService {
 	}
 	
 	public List<Movie> getMovie(){
+		return movieRepository.getMovie(); 
+	}
+	
+	public List<Movie> getMovieByExposure(){
 		return movieRepository.getMovieByList(); 
 	}
 	
