@@ -5,6 +5,10 @@ a:hover , a{
 	cursor: pointer;
 	text-decoration: none;
 }
+.normal-header{
+	background-color: #fff;	
+}
+
 .normal-header a{
 	color:#000;
 }
@@ -219,4 +223,95 @@ a:hover , a{
 #thumbSwiper .swiper-slide{
 	background-color: #000;
 	color:#fff;
+}
+
+#content-section .content-wrap{
+	margin-top:90px;
+}
+.detail-top{ 
+	display:flex;
+}
+
+.poster-wrap{
+	width:316px;
+	height:451px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.poster-wrap img{
+	width:100%;
+}
+.detail-ifno{
+	margin :35px 0 0 36px ;
+}
+.movie-info{
+	font-size: 20px;
+}
+.movie-tit{
+	font-size: 30px;
+}
+.detail-tab-wrap{ 
+	display: flex;
+	width:100%; 
+}
+.detail-tab-wrap li{
+	width:100%;
+}
+.detail-tab-wrap li button{
+	width:100%;
+	padding: 10px 0;
+	border: none;
+	background: #fff;
+	font-size: 18px;
+	color:#7f7f7f;
+	font-weight: 700;
+}
+
+.detail-tab-wrap li.active button{
+	border-bottom: 2px solid #000;
+	color: #000;
+}
+.tab-content>div{
+	display:none;
+}
+
+.tab-content>div.active{
+	display:block;
+}
+.detail-tab{
+	padding: 50px 0;
+}
+.info-box{
+	margin-top: 20px;
+}
+
+.info-wrap{
+	font-size: 22px;
+	position: relative;
+}
+.info-wrap em{
+	text-decoration: none;
+	font-style: normal;
+	padding-left: 10px;
+	padding-right: 20px;
+	color:#7c7c7c;
+}
+.info-wrap em:before{
+	content:"";
+	display: block;
+	width:4px;
+	height:4px;
+	background-color: #7c7c7c;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.info-wrap .con + .con{
+	margin-left: 5px;
+}
+.info-wrap .con + .con:before{
+	content:",";
+	margin-right: 5px;
 }

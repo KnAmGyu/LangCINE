@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>      
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +16,52 @@
 		
 		<div id="content-section">
 			<div class="content-wrap">
-				
-			
+				<div class="detail-top">
+					<div class="poster-wrap">
+						<img src="/static/images/20461_103_1.jpg">
+					</div>
+					<div class="detail-ifno">
+						<div class="movie-tit">
+							<strong>금의 나라 물의 나라</strong>
+						</div>
+						<div class="movie-info">
+							<span>2023.11.15 개봉</span>
+							<span> 56분</span>
+						</div>
+						<div class="like-info">
+						
+						</div>
+					</div>		
+				</div>
+				<div class="detail-bottom">
+					<ul class="detail-tab-wrap">
+						<li class="active">
+						    <button type="button" id="detailTabBtn" class="tab-tit"><span>상세정보</span></button>
+					    </li>
+						<li>
+					    	<button type="button" id="reviewTabBtn"  class="tab-tit"><span>한줄평</span></button>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="detail-tab bg-gray active" id="detailTab">
+							<h3>영화 정보</h3>
+							<div class="info-box">
+								<div class="info-wrap">
+									<em class="tit">장르</em> <span class="con">애니메이션</span>
+								</div>
+								<div class="info-wrap">
+									<em class="tit">감독</em> <span class="con">테스트감독</span>
+								</div>
+								<div class="info-wrap">
+									<em class="tit">출연</em> <span class="con">테스트1</span><span class="con">테스트2</span><span class="con">테스트3</span>
+								</div>
+							</div>
+						</div>
+						<div class="review-tab bg-gray" id="reviewTab">
+							
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		

@@ -18,6 +18,16 @@ public class MovieController {
 	@Autowired
 	private MovieService movieService;
 	
+	
+	@GetMapping("/detail-view")
+	public String movieDetail() {
+		
+		
+		return "movie/detail";
+	}
+	
+	
+	
 	@GetMapping("/info-view")
 	public String infoView(Model model) {
 		
