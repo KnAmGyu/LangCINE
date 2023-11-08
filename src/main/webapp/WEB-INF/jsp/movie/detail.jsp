@@ -9,6 +9,7 @@
 <title>LangCINE</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
 	<div id="wrap">
@@ -29,7 +30,26 @@
 							<span> 56분</span>
 						</div>
 						<div class="like-info">
-						
+							<i class="bi bi-heart" ></i>
+						</div>
+						<div class="story-info">
+							<div class="story-box">
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+							</div>
 						</div>
 					</div>		
 				</div>

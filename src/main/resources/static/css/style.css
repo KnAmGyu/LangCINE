@@ -230,6 +230,7 @@ a:hover , a{
 }
 .detail-top{ 
 	display:flex;
+	justify-content: space-between;
 }
 
 .poster-wrap{
@@ -243,6 +244,8 @@ a:hover , a{
 }
 .detail-ifno{
 	margin :35px 0 0 36px ;
+	width:100%;
+	padding-left: 100px;
 }
 .movie-info{
 	font-size: 20px;
@@ -314,4 +317,15 @@ a:hover , a{
 .info-wrap .con + .con:before{
 	content:",";
 	margin-right: 5px;
+}
+
+.like-info{
+	width: 100px;
+	border: 1px solid #000;
+	border-radius: 16px;
+	padding: 8px 0;
+}
+.story-info{
+	height:180px;
+	overflow: scroll;
 }
