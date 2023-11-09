@@ -16,7 +16,8 @@ public class MovieDetail {
 	private String bannerImage;
 	private String genre;
 	private String director;
-	private List<String> star;
+//	private List<String> star;
+	private String star;
 	private String story;
 	private int runningTime;
 	private Date openDay;

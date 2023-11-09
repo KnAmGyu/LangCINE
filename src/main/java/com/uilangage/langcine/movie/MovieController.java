@@ -26,7 +26,7 @@ public class MovieController {
 	
 	@GetMapping("/detail-view")
 	public String movieDetail(@RequestParam("id") int id, Model model) {
-		List<MovieDetail> movieInfoList = mainMovieService.getMovieInfo(id);
+		MovieDetail movieInfoList = mainMovieService.getMovieInfo(id);
 		model.addAttribute("infoList", movieInfoList);
 		return "movie/detail";
 	}

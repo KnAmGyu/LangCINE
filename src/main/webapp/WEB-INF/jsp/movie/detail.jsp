@@ -19,36 +19,22 @@
 			<div class="content-wrap">
 				<div class="detail-top">
 					<div class="poster-wrap">
-						<img src="/static/images/20461_103_1.jpg">
+						<img src="${infoList.thumbImage }">
 					</div>
 					<div class="detail-ifno">
 						<div class="movie-tit">
 							<strong>${infoList.movieName }</strong>
 						</div>
 						<div class="movie-info">
-							<span>2023.11.15 개봉</span>
-							<span> 56분</span>
+							<span>${infoList.openDay } 개봉</span>
+							<span> ${infoList.runningTime }분</span>
 						</div>
 						<div class="like-info">
 							<i class="bi bi-heart" ></i><span>314</span>
 						</div>
 						<div class="story-info">
 							<div class="story-box">
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
-								테스트용입니다.테스트용입니다.테스트용입니다.테스트용입니다.
+								${infoList.story }
 							</div>
 						</div>
 					</div>		
@@ -67,13 +53,16 @@
 							<h3>영화 정보</h3>
 							<div class="info-box">
 								<div class="info-wrap">
-									<em class="tit">장르</em> <span class="con">애니메이션</span>
+									<em class="tit">장르</em> <span class="con">${infoList.genre }</span>
 								</div>
 								<div class="info-wrap">
-									<em class="tit">감독</em> <span class="con">테스트감독</span>
+									<em class="tit">감독</em> <span class="con">${infoList.director }</span>
 								</div>
 								<div class="info-wrap">
-									<em class="tit">출연</em> <span class="con">테스트1</span><span class="con">테스트2</span><span class="con">테스트3</span>
+									<em class="tit">출연</em> 
+									<%-- <c:forEach var="movieInfo" items="${infoList.star }">--%>
+									<span class="con">${infoList.star }</span>
+									<%--</c:forEach>--%>
 								</div>
 							</div>
 						</div>
