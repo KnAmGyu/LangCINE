@@ -72,7 +72,7 @@ a:hover , a{
 	
 }
 #footer-section{
-	margin-top:80px;
+	padding-top:80px;
 }
 #footer-section .inner{
 	width:980px;
@@ -234,8 +234,7 @@ a:hover , a{
 }
 
 .poster-wrap{
-	width:316px;
-	height:451px;
+	width:330px;
 	border-radius: 20px;
 	overflow: hidden;
 }
@@ -243,12 +242,13 @@ a:hover , a{
 	width:100%;
 }
 .detail-ifno{
-	margin :35px 0 0 36px ;
-	width:100%;
-	padding-left: 100px;
+	margin-top :35px;
+	width:650px;
+	padding-left: 80px;
 }
 .movie-info{
 	font-size: 20px;
+	margin-top: 20px;
 }
 .movie-tit{
 	font-size: 30px;
@@ -270,7 +270,7 @@ a:hover , a{
 	font-weight: 700;
 }
 
-.detail-tab-wrap li.active button{
+.detail-tab-wrap li button.active{
 	border-bottom: 2px solid #000;
 	color: #000;
 }
@@ -323,9 +323,16 @@ a:hover , a{
 	width: 100px;
 	border: 1px solid #000;
 	border-radius: 16px;
-	padding: 8px 0;
+	padding: 8px 20px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
 }
 .story-info{
-	height:180px;
+	height:250px;
 	overflow: scroll;
+	margin-top: 30px;
+}
+.detail-bottom{
+	margin-top: 50px;
 }

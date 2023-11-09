@@ -23,14 +23,14 @@
 					</div>
 					<div class="detail-ifno">
 						<div class="movie-tit">
-							<strong>금의 나라 물의 나라</strong>
+							<strong>${infoList.movieName }</strong>
 						</div>
 						<div class="movie-info">
 							<span>2023.11.15 개봉</span>
 							<span> 56분</span>
 						</div>
 						<div class="like-info">
-							<i class="bi bi-heart" ></i>
+							<i class="bi bi-heart" ></i><span>314</span>
 						</div>
 						<div class="story-info">
 							<div class="story-box">
@@ -55,11 +55,11 @@
 				</div>
 				<div class="detail-bottom">
 					<ul class="detail-tab-wrap">
-						<li class="active">
-						    <button type="button" id="detailTabBtn" class="tab-tit"><span>상세정보</span></button>
+						<li>
+						    <button type="button" id="detailTabBtn" data-tab="detailTab" class="tab-tit active"><span>상세정보</span></button>
 					    </li>
 						<li>
-					    	<button type="button" id="reviewTabBtn"  class="tab-tit"><span>한줄평</span></button>
+					    	<button type="button" id="reviewTabBtn" data-tab="reviewTab" class="tab-tit"><span>한줄평</span></button>
 						</li>
 					</ul>
 					<div class="tab-content">
@@ -77,7 +77,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="review-tab bg-gray" id="reviewTab">
+						<div class="detail-tab bg-gray" id="reviewTab">
 							
 						</div>
 					</div>
@@ -94,5 +94,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="/static/js/queryscript.js"></script>
+<script src="/static/js/tab-motion.js"></script>
 </body>
 </html>

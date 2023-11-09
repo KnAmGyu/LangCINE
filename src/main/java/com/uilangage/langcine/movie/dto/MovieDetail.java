@@ -1,7 +1,12 @@
 package com.uilangage.langcine.movie.dto;
 
 import java.sql.Date;
+import java.util.List;
 
+import lombok.Builder;
+import lombok.Getter;
+@Builder
+@Getter
 public class MovieDetail {
 
 	private int id;
@@ -11,7 +16,7 @@ public class MovieDetail {
 	private String bannerImage;
 	private String genre;
 	private String director;
-	private String star;
+	private List<String> star;
 	private String story;
 	private int runningTime;
 	private Date openDay;

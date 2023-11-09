@@ -2,6 +2,9 @@
  * 
  */
 
+
+
+
 $(window).scroll(function () { 
 	var scrollValue = $(document).scrollTop(); 
     if(scrollValue >= 90 ){
@@ -42,3 +45,5 @@ $(window).scroll(function () {
           }
         }
       });
+      
+     
