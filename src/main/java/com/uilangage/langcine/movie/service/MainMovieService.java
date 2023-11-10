@@ -29,7 +29,7 @@ public class MainMovieService {
 				 					.bannerImage(movie.getBannerImage())
 				 					.genre(movie.getGenre())
 				 					.director(movie.getDirector())
-				 					.star(movie.getStar())
+				 					.star(starList)
 				 					.story(movie.getStory())
 				 					.runningTime(movie.getRunningTime())
 				 					.openDay(movie.getOpenDay())

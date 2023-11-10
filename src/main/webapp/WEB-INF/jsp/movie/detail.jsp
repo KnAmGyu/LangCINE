@@ -60,9 +60,9 @@
 								</div>
 								<div class="info-wrap">
 									<em class="tit">출연</em> 
-									<%-- <c:forEach var="movieInfo" items="${infoList.star }">--%>
-									<span class="con">${infoList.star }</span>
-									<%--</c:forEach>--%>
+									<c:forEach var="movieInfo" items="${infoList.star }">
+									<span class="con">${movieInfo }</span>
+									</c:forEach>
 								</div>
 							</div>
 						</div>
