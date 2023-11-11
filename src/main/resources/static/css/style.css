@@ -288,18 +288,20 @@ a:hover , a{
 	margin-top: 20px;
 }
 
-.info-wrap{
+.info-con{
 	font-size: 22px;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
-.info-wrap em{
+.info-con em{
 	text-decoration: none;
 	font-style: normal;
 	padding-left: 10px;
 	padding-right: 20px;
 	color:#7c7c7c;
 }
-.info-wrap em:before{
+.info-con em:before{
 	content:"";
 	display: block;
 	width:4px;
@@ -308,13 +310,14 @@ a:hover , a{
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;
+	left:0;
 	transform: translateY(-50%);
 }
 
-.info-wrap .con + .con{
+.info-con .con + .con{
 	margin-left: 5px;
 }
-.info-wrap .con + .con:before{
+.info-con .con + .con:before{
 	content:",";
 	margin-right: 5px;
 }
@@ -365,10 +368,103 @@ a:hover , a{
 }
 .ticket-info>div{
 	width:100%;
+	background-color: #000;
+	color: #fff;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
 }
 .movie-select{
 	display: flex;
 }
 .movie-select>div{
 	width:100%;
+}
+.con-wrap{
+	max-width: 902px;
+}
+
+.process-wrap li strong{
+	width:78px;
+	padding-top: 42px;
+	border-right: 2px solid #444;
+}
+.process-wrap li + li>strong{
+	border-top: 2px solid #444;
+}
+
+.movie-select .movie-id div>button{
+	width: 100%;
+	background: #fff;
+	height:45px;
+	border: none;
+}
+
+.theater-id{
+	padding: 30px;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+
+.movie-box{
+    width: 82px;
+    height: 54px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #fff; 
+    margin-bottom: 24px;
+}
+.movie-box + .movie-box{
+	margin-left: 14px;
+}
+.movie-box:nth-child(5){
+	margin-left:0px;
+}
+.movie-box span{
+	display: block;
+}
+
+.theater-name{
+	height: 60px;
+	line-height: 60px;
+	font-size: 26px;
+	background-color: #000;
+	color: #fff;
+}
+.current-month{
+	height: 30px;
+	line-height: 30px;
+}
+.date-pick ul{
+	display: flex;
+}
+.date-pick .date label{
+	display: block;
+	cursor: pointer;
+	width:64px;
+	height: 60px;
+	margin-bottom: 0;
+	padding: 0 11px;
+}
+.date-pick .date label input[type="radio"]{
+	overflow: hidden;
+	position: absolute;
+	width:1px;
+	height: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+.date-pick .date label input[type="radio"]:checked + strong{
+	background-color: #000;
+	border-radius:100%;
+	color: #fff;
+}
+.date-pick .date label strong{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
+.date-pick .date label em{
+	display: block;
+	height: 20px;
 }

@@ -34,18 +34,94 @@
 						</div>
 						<div class="movie-select">
 							<div class="movie-id">
-								<div>물의 나라 금의 나라</div>
-								<div>테스트용</div>
-								<div>테스트용1</div>
-								<div>테스트용2</div>
-								<div>테스트용3</div>
+								<div><button type="button">물의 나라 금의 나라</button></div>
+								<div><button type="button">테스트용</button></div>
+								<div><button type="button">테스트용1</button></div>
+								<div><button type="button">테스트용2</button></div>
+								<div><button type="button">테스트용3</button></div>
 							</div>
-							<div class="theater-id">
-								<div class="movie-box">
-									<span>09 : 00</span>
-									<span>1관</span>
+							<div class="theater-wrap">
+								<div class="date-pick">
+									<div class="current-month">11 월</div>
+									<ul>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick" checked>
+												<strong>11</strong>
+												<em>토</em>
+											</label>
+										</li>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick">
+												<strong>12</strong>
+												<em>일</em>
+											</label>
+										</li>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick">
+												<strong>13</strong>
+												<em>월</em>
+											</label>
+										</li>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick">
+												<strong>14</strong>
+												<em>화</em>
+											</label>
+										</li>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick">
+												<strong>15</strong>
+												<em>수</em>
+											</label>
+										</li>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick">
+												<strong>16</strong>
+												<em>목</em>
+											</label>
+										</li>
+										<li class="date">
+											<label>
+												<input type="radio" name="radioDatePick">
+												<strong>17</strong>
+												<em>금</em>
+											</label>
+										</li>
+									</ul>
 								</div>
-							</div>	
+								<div class="theater-id">
+									<button type="button" class="movie-box">
+										<span>09 : 00</span>
+										<span>1관</span>
+									</button>
+									<button type="button" class="movie-box">
+										<span>09 : 00</span>
+										<span>1관</span>
+									</button>
+									<button type="button" class="movie-box">
+										<span>09 : 00</span>
+										<span>1관</span>
+									</button>
+									<button type="button" class="movie-box">
+										<span>09 : 00</span>
+										<span>1관</span>
+									</button>
+									<button type="button" class="movie-box">
+										<span>09 : 00</span>
+										<span>1관</span>
+									</button>
+									<button type="button" class="movie-box">
+										<span>09 : 00</span>
+										<span>1관</span>
+									</button>
+								</div>	
+							</div>
 						</div>
 					</div>
 					<div class="headcount">

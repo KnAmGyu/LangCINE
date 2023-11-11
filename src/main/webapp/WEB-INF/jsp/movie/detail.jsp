@@ -52,17 +52,19 @@
 						<div class="detail-tab bg-gray active" id="detailTab">
 							<h3>영화 정보</h3>
 							<div class="info-box">
-								<div class="info-wrap">
+								<div class="info-con">
 									<em class="tit">장르</em> <span class="con">${infoList.genre }</span>
 								</div>
-								<div class="info-wrap">
+								<div class="info-con">
 									<em class="tit">감독</em> <span class="con">${infoList.director }</span>
 								</div>
-								<div class="info-wrap">
+								<div class="info-con">
 									<em class="tit">출연</em> 
-									<c:forEach var="movieInfo" items="${infoList.star }">
-									<span class="con">${movieInfo }</span>
-									</c:forEach>
+									<div class="con-wrap">
+										<c:forEach var="movieInfo" items="${infoList.star }">
+										<span class="con">${movieInfo }</span>
+										</c:forEach>
+									</div>
 								</div>
 							</div>
 						</div>
