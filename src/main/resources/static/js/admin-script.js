@@ -13,7 +13,6 @@
 				let theaterNumber = $("input[name=theater]:checked").val();
  				let movieNumber = $("select[name=movieList]").val();
  				
- 				alert(theaterNumber + "," + movieNumber);
  				
  				
  			 	$.ajax({

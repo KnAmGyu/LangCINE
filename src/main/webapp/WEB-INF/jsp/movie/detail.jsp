@@ -69,7 +69,17 @@
 							</div>
 						</div>
 						<div class="detail-tab bg-gray" id="reviewTab">
-							
+							<div class="review-top">
+								<input type="text" class="form-control review-input" id="reiviewInput" >
+								<button type="button" class="btn btn-secondary">작성</button>
+							</div>
+							<div class="review-bottom">
+								<div class="review">
+									<div>
+										 <strong></strong>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

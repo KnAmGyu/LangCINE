@@ -2,6 +2,15 @@
  * 
  */
 $(document).ready(function(){
+	$('input[name="radioDatePick"]').change(function() {
+		let screenDay = $("input[name=radioDatePick]:checked").val();
+		
+		$("#movieDate").text(screenDay);
+	});
+	
+	
+	
+	
 	
 	/** 회원가입  */
 	$("#joinBtn").on("click",function(){
