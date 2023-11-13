@@ -18,6 +18,32 @@
 				, #{userId}
 			)	
 	</insert>
-  
+  <delete id="deleteLikeByMovieIdAndUserId" parameterType="map">
+		DELETE FROM
+			`like`
+		WHERE
+			`movieId` = #{movieId}
+			AND `userId` = #{userId}
+	</delete>
+  	<select id="selectCountLike" parameterType="int"
+	 resultType="int">
+		SELECT
+			count(1)
+		FROM
+			`like`
+		WHERE
+			`movieId` = #{movieId}		
+	
+	</select>
+  	<select id="selectCountLikeByUserId" parameterType="map"
+	 resultType="int">
+		SELECT
+			count(1)
+		FROM
+			`like`
+		WHERE
+			`movieId` = #{movieId}	
+		AND `userId` = #{userId}	
+	</select>
   
   </mapper>

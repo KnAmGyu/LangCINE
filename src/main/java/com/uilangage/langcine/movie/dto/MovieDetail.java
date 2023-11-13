@@ -18,7 +18,8 @@ public class MovieDetail {
 	private String genre;
 	private String director;
 	private List<String> star;
-//	private String star;
+	private int likeCount;
+	private boolean isLike;
 	private String story;
 	private int runningTime;
 	private Date openDay;

@@ -41,6 +41,7 @@
 						<c:set var="date"><fmt:formatDate value="${today}" pattern="dd" /></c:set> 
 						<div class="ticket-info">
 							<div class="movie-name">물의나라 금의나라</div>
+	
 							<div id="movieDate" class="movie-date"><fmt:formatDate value="${today}" pattern="YYYY-MM-dd(E)" /></div>
 						</div>
 						<div class="movie-select">

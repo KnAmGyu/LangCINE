@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,6 +39,27 @@ public class LikeRestController {
 		
 	}
 	
-	
+	@DeleteMapping("/detail/unlike")
+	public Map<String, String> unlike(
+			@RequestParam("movieId") int movieId
+			, HttpSession session) {
+		
+		int userId = (Integer)session.getAttribute("userId");
+		
+		int count = likeService.deleteLikeByMovieIdAndUserId(movieId, userId);
+		
+		Map<String, String> resultMap = new HashMap<>();
+		
+		if(count == 1) {
+			resultMap.put("result", "success");
+		} else {
+			
+			resultMap.put("result", "fail");
+		}
+		
+		return resultMap;
+		
+		
+	}
 	
 }

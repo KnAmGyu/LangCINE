@@ -9,11 +9,15 @@ import org.springframework.stereotype.Service;
 
 import com.uilangage.langcine.admin.movie.domain.Movie;
 import com.uilangage.langcine.admin.movie.repository.MovieRepository;
+import com.uilangage.langcine.like.service.LikeService;
 import com.uilangage.langcine.movie.dto.MovieDetail;
 
 @Service
 public class MainMovieService {
 
+	@Autowired
+	private LikeService likeService;
+	
 	@Autowired
 	private MovieRepository movieRepository;
 	
@@ -21,6 +25,8 @@ public class MainMovieService {
 		
 		 Movie movie = movieRepository.getMovieInfo(id);
 		 List<String> starList = new ArrayList<String>(Arrays.asList(movie.getStar().split(",")));
+		 int likeCount = likeService.countLike(id);
+//		 boolean isLike = likeService.isLike(id, loginUserId);
 		 MovieDetail movieDetail = MovieDetail.builder()
 				 					.id(id)
 				 					.movieId(movie.getId())
@@ -31,6 +37,8 @@ public class MainMovieService {
 				 					.genre(movie.getGenre())
 				 					.director(movie.getDirector())
 				 					.star(starList)
+				 					.likeCount(likeCount)
+//				 					.isLike(isLike)
 				 					.story(movie.getStory())
 				 					.runningTime(movie.getRunningTime())
 				 					.openDay(movie.getOpenDay())

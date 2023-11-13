@@ -16,7 +16,7 @@
 			</div>	
 			<div id="nav">
 				<ul>
-					<li><a>예매</a></li>
+					<li><a href="/langcine/ticketing-view">예매</a></li>
 					<li><a href="/langcine/info-view">영화</a></li>
 				</ul>
 			</div>

@@ -39,7 +39,7 @@
 				        		</span>
 				        		<div class="over-box">
 					        		<div class="inner">
-					        			<a href="#" class="btn-thumb">예매하기</a>
+					        			<a href="/langcine/ticketing-view" class="btn-thumb">예매하기</a>
 				        				<a href="/langcine/detail-view?id=${movie.id }" class="btn-thumb">영화정보</a>
 					        		</div>
 				        			

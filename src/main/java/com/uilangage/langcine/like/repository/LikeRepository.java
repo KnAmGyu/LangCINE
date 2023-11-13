@@ -10,5 +10,16 @@ public interface LikeRepository {
 			@Param("movieId") int movieId
 			, @Param("userId") int userId);
 	
+	public int deleteLikeByMovieIdAndUserId(
+			@Param("movieId") int movieId
+			, @Param("userId") int userId);
+	
+	public int selectCountLike(
+			@Param("movieId") int movieId);
+	
+	public int selectCountLikeByUserId(
+			@Param("movieId") int movieId
+			, @Param("userId") int userId);
+	
 	
 }

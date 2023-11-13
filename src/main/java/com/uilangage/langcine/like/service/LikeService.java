@@ -14,4 +14,18 @@ public class LikeService {
 		return likeRepository.addLike(movieId, userId);
 	}
 
+	public int deleteLikeByMovieIdAndUserId(int movieId, int userId) {
+		return likeRepository.deleteLikeByMovieIdAndUserId(movieId, userId);
+	}
+	
+	public int countLike(int movieId) {
+		return likeRepository.selectCountLike(movieId);
+	}
+
+	public boolean isLike(int movieId, int userId) {
+		int count = likeRepository.selectCountLikeByUserId(movieId, userId);
+				
+		return count != 0;
+	}
+	
 }
