@@ -30,7 +30,7 @@
 							<span> ${infoList.runningTime }분</span>
 						</div>
 						<div class="like-info">
-							<i class="bi bi-heart" ></i><span>314</span>
+							<i class="bi bi-heart like-icon" data-post-id="${infoList.id }"></i><span>314</span>
 						</div>
 						<div class="story-info">
 							<div class="story-box">

@@ -1,6 +1,6 @@
 package com.uilangage.langcine.admin.movie.domain;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Theater {
 	private int id;

@@ -2,6 +2,35 @@
  * 
  */
 $(document).ready(function(){
+	
+	$(".like-icon").on("click",function(){
+			
+			let movieId = $(this).data("post-id");
+			
+			$.ajax({
+				type:"post"
+				, url:"/detail/like"
+				, data:{"movieId":movieId}
+				, success:function(data){
+					
+					if(data.result == "success"){
+						location.reload();
+					}else{
+						alert("좋아요 실패");
+					}
+					
+					
+				}
+				, error:function(){
+					alert("좋아요 에러");
+				}
+			});
+			
+		});
+	
+	
+	
+	
 	$('input[name="radioDatePick"]').change(function() {
 		let screenDay = $("input[name=radioDatePick]:checked").val();
 		

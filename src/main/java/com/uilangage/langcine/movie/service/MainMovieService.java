@@ -22,7 +22,8 @@ public class MainMovieService {
 		 Movie movie = movieRepository.getMovieInfo(id);
 		 List<String> starList = new ArrayList<String>(Arrays.asList(movie.getStar().split(",")));
 		 MovieDetail movieDetail = MovieDetail.builder()
-				 					.id(movie.getId())
+				 					.id(id)
+				 					.movieId(movie.getId())
 				 					.movieName(movie.getMovieName())
 				 					.thumbImage(movie.getThumbImage())
 				 					.visualImage(movie.getVisualImage())

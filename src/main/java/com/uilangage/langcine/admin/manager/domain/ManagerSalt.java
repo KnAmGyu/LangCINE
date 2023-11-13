@@ -1,6 +1,6 @@
 package com.uilangage.langcine.admin.manager.domain;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ManagerSalt {
 

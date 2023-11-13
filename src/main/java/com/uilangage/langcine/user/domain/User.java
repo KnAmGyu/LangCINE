@@ -1,7 +1,6 @@
 package com.uilangage.langcine.user.domain;
 
-import java.sql.Date;
-
+import java.util.Date;
 
 public class User {
 

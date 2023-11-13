@@ -5,7 +5,14 @@
 		<div id="header-section" class="main-header">
 			<h1 id=logo><a href="/langcine/main-view">LangCINE</a></h1>
 			<div class="gnb">
-				<a>로그인</a>
+			<c:choose> 
+				<c:when test="${not empty userId }">
+				${userName } 님 <a href="/user/logout"> 로그아웃</a>
+				</c:when>
+				<c:otherwise>
+				<a href="/user/login-view">로그인</a>
+				</c:otherwise>
+			</c:choose>	
 			</div>	
 			<div id="nav">
 				<ul>

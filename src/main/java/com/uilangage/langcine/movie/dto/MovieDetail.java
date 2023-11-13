@@ -10,6 +10,7 @@ import lombok.Getter;
 public class MovieDetail {
 
 	private int id;
+	private int movieId;
 	private String movieName;
 	private String thumbImage;
 	private String visualImage;
