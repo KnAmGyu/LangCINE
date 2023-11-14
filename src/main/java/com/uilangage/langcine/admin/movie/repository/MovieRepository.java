@@ -31,7 +31,8 @@ public interface MovieRepository {
 			, @Param("story") String story
 			, @Param("runningTime") int runningTime
 			, @Param("openDay") String openDay
-			, @Param("exposure") String exposure);
+			, @Param("exposure") String exposure
+			, @Param("screening") String screening);
 	
 	
 }

@@ -25,6 +25,7 @@
 						<div class="btn-form">
 							<button type="submit" id="loginBtn">로그인</button>
 						</div>
+						<div><a href="/user/join-view">회원가입</a></div>
 					</form>
 				</div>
 			

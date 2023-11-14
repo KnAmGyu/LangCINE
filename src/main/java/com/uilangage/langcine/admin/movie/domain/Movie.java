@@ -18,6 +18,7 @@ public class Movie {
 	private int runningTime;
 	private Date openDay;
 	private String exposure;
+	private String screening;
 	private Date createdAt;
 	private Date updatedAt;
 	public int getId() {
@@ -92,6 +93,12 @@ public class Movie {
 	public void setExposure(String exposure) {
 		this.exposure = exposure;
 	}
+	public String getScreening() {
+		return screening;
+	}
+	public void setScreening(String screening) {
+		this.screening = screening;
+	}
 	public Date getCreatedAt() {
 		return createdAt;
 	}
@@ -104,5 +111,6 @@ public class Movie {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	
 	
 }

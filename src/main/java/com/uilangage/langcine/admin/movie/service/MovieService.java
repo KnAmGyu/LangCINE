@@ -45,14 +45,15 @@ public class MovieService {
 			, String story
 			, int runningTime
 			, String openDay
-			, String exposure){
+			, String exposure
+			, String screening){
 		
 		String thumb = FileManager.saveFile(managerId, thumbImage);
 		String visual = FileManager.saveFile(managerId, visualImage);
 		String banner = FileManager.saveFile(managerId, bannerImage);
 		
 		
-		return movieRepository.insertMovie(managerId, movieName, thumb, visual, banner, genre, director, star, story, runningTime, openDay, exposure);
+		return movieRepository.insertMovie(managerId, movieName, thumb, visual, banner, genre, director, star, story, runningTime, openDay, exposure, screening);
 		
 		
 		

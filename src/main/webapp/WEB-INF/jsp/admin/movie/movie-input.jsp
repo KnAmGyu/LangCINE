@@ -140,6 +140,21 @@
 								</div>
 							</td>
 						</tr>
+						<tr>
+							<th>상영여부</th>
+							<td>
+								<div>
+									<div class="radio-input">
+										<input type="radio" id="screening" name="screening" value="Y"/>
+				    					<label for="screening">노출</label>
+									</div>
+									<div class="radio-input">
+					    				<input type="radio" id="nonScreening" name="screening" value="N"/>
+					    				<label for="nonScreening">미노출</label>
+				    				</div>
+								</div>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 				<div>

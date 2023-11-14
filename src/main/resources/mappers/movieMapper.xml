@@ -20,6 +20,7 @@
 		, `runningTime`
 		, `openDay`
 		, `exposure`
+		, `screening`
 	FROM
 		`movie`
 	WHERE
@@ -40,6 +41,7 @@
   			, `runningTime`
   			, `openDay`
   			, `exposure`
+  			, `screening`
 			, `createdAt`
 			, `updatedAt`
 		FROM 
@@ -85,6 +87,7 @@
   			, `runningTime`
   			, `openDay`
   			, `exposure`
+  			, `screening`
 		) 
 	VALUES
 		(
@@ -99,6 +102,7 @@
 			, #{runningTime}
 			, #{openDay}
 			, #{exposure}
+			, #{screening}
 		)
 
   </insert>
