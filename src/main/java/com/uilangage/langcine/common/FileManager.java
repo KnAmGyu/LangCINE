@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileManager {
 
 	// 상수 
-	public final static String FILE_UPLOAD_PATH = "D:\\information1278\\langcineproject\\upload\\langcine";
+	public final static String FILE_UPLOAD_PATH = "/home/ec2-user/web/langcine/upload";
 	
 	
 	// file을 특정 디렉토리(폴더)에 저장하고,
