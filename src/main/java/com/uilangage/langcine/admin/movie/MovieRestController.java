@@ -57,11 +57,12 @@ public class MovieRestController {
 			, @RequestParam("runningTime") int runningTime
 			, @RequestParam("openDay") String openDay
 			, @RequestParam("exposure") String exposure
+			, @RequestParam("screening") String screening
 			, HttpSession session){
 		
 		int managerId = (Integer)session.getAttribute("managerId");
 		
-		int count = movieService.addMovie(managerId, movieName, thumbImage, visualImage, bannerImage, genre, director, star, story, runningTime, openDay, exposure);
+		int count = movieService.addMovie(managerId, movieName, thumbImage, visualImage, bannerImage, genre, director, star, story, runningTime, openDay, exposure, screening);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		
