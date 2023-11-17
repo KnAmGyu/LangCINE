@@ -6,6 +6,32 @@
   
   <mapper namespace="com.uilangage.langcine.admin.movie.repository.MovieRepository">
   
+    <select id="getMovieByExposureScreen" resultType="com.uilangage.langcine.admin.movie.domain.Movie">
+  	SELECT 
+			`id`
+			, `movieName`
+  			, `thumbImage`
+  			, `visualImage`
+  			, `bannerImage`
+  			, `genre`
+  			, `director`
+  			, `star`
+  			, `story`
+  			, `runningTime`
+  			, `openDay`
+  			, `exposure`
+  			, `screening`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`movie`
+		WHERE
+		 	`screening` = 'N'
+		AND
+			`exposure` = 'Y'	 	
+  </select>
+  
+  
   <select id="getMovieInfo" parameterType="int" 
    resultType="com.uilangage.langcine.admin.movie.domain.Movie">
 	SELECT
@@ -47,7 +73,30 @@
 		FROM 
 			`movie`
 		WHERE
-		 	`exposure` = 'Y'
+		 	`screening` = 'Y'
+  </select>
+  
+  <select id="getMovieExpected" resultType="com.uilangage.langcine.admin.movie.domain.Movie">
+  	SELECT 
+			`id`
+			, `movieName`
+  			, `thumbImage`
+  			, `visualImage`
+  			, `bannerImage`
+  			, `genre`
+  			, `director`
+  			, `star`
+  			, `story`
+  			, `runningTime`
+  			, `openDay`
+  			, `exposure`
+  			, `screening`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`movie`
+		WHERE
+		 	`openDay` > NOW();
   </select>
   
   
