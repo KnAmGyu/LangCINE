@@ -33,6 +33,10 @@ public class MovieService {
 		return movieRepository.getMovieByList(); 
 	}
 	
+	public List<Movie> getMovieByOpenDay(){
+		 return movieRepository.getMovieExpected();
+	}
+	
 	public int addMovie(
 			int managerId
 			, String movieName
