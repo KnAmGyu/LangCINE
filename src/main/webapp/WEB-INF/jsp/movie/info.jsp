@@ -93,7 +93,7 @@
 				        </div>
 			    	</div>
 			    	
-			    	<div class="info-part">
+			   <!--  	<div class="info-part">
 						<h3>기존작</h3>
 				 	    <div class="info-thumb">
 				 	    	<c:forEach var="movie" items="${movie }"  >
@@ -124,7 +124,7 @@
 				        	</c:if>
 				        	</c:forEach>
 				        </div>
-			    	</div>
+			    	</div>-->
 			    	
 			    </div>
 			</div>

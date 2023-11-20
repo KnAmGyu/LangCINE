@@ -113,7 +113,8 @@ $(document).ready(function(){
 			, data:{"loginId":loginId,"userPassword":password}
 			, success:function(data){
 				if(data.result == "success"){
-					location.href = "/user/join-view";
+					history.go(-1);
+					location.reload;
 				}else{
 					alert("아이디 비밀번호를 확인해 주세요");
 				}
