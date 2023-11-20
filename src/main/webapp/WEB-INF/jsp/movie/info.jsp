@@ -33,6 +33,7 @@
 						<h3>현재 상영작</h3>
 				 	    <div class="info-thumb">
 				 	    	<c:forEach var="movie" items="${movie }"  >
+				 	    	<c:if test="${movie.screening  eq 'Y' }">
 					        <div class="item-wrap">
 					        	<div class="top-info">
 					        		<span class="thumb-info">
@@ -56,6 +57,7 @@
 					        		<span>${movie.runningTime } 분</span>
 					        	</div>
 				        	</div>
+				        	</c:if>
 				        	</c:forEach>
 				        </div>
 			    	</div>
@@ -63,7 +65,39 @@
 			    	<div class="info-part">
 						<h3>상영 예정작</h3>
 				 	    <div class="info-thumb">
+				 	    	<c:forEach var="newmovie" items="${expect }"  >
+				 	    	
+					        <div class="item-wrap">
+					        	<div class="top-info">
+					        		<span class="thumb-info">
+					        			<img src="${newmovie.thumbImage }">	
+					        		</span>
+					        		<div class="over-box">
+						        		<div class="inner">
+					        				<a href="/langcine/detail-view?id=${newmovie.id }" class="btn-thumb">영화정보</a>
+						        		</div>
+					        			
+					        		</div>
+					        	</div>
+					        	<div class="bottom-info">
+					        		<strong>
+					        			${fn:substring(newmovie.movieName, 0 ,8) }
+						        		<c:if test="${(fn:length(newmovie.movieName) ) gt 12 }">
+											...
+										</c:if>
+					        		</strong>
+					        		<span>${newmovie.runningTime } 분</span>
+					        	</div>
+				        	</div>
+				        	</c:forEach>
+				        </div>
+			    	</div>
+			    	
+			   <!--  	<div class="info-part">
+						<h3>기존작</h3>
+				 	    <div class="info-thumb">
 				 	    	<c:forEach var="movie" items="${movie }"  >
+				 	    	<c:if test="${movie.screening  eq 'Y' }">
 					        <div class="item-wrap">
 					        	<div class="top-info">
 					        		<span class="thumb-info">
@@ -71,6 +105,7 @@
 					        		</span>
 					        		<div class="over-box">
 						        		<div class="inner">
+						        			<a href="/langcine/ticketing-view" class="btn-thumb">예매하기</a>
 					        				<a href="/langcine/detail-view?id=${movie.id }" class="btn-thumb">영화정보</a>
 						        		</div>
 					        			
@@ -78,7 +113,7 @@
 					        	</div>
 					        	<div class="bottom-info">
 					        		<strong>
-					        			${fn:substring(movie.movieName, 0 ,8) }
+					        			${fn:substring(movie.movieName, 0 ,12) }
 						        		<c:if test="${(fn:length(movie.movieName) ) gt 12 }">
 											...
 										</c:if>
@@ -86,9 +121,10 @@
 					        		<span>${movie.runningTime } 분</span>
 					        	</div>
 				        	</div>
+				        	</c:if>
 				        	</c:forEach>
 				        </div>
-			    	</div>
+			    	</div>-->
 			    	
 			    </div>
 			</div>

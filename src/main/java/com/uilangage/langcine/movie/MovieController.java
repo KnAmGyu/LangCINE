@@ -26,6 +26,7 @@ public class MovieController {
 	
 	@GetMapping("/detail-view")
 	public String movieDetail(@RequestParam("id") int id, Model model) {
+//		로그인아이디를 받아온다 session 활용
 		MovieDetail movieInfoList = mainMovieService.getMovieInfo(id);
 		model.addAttribute("infoList", movieInfoList);
 		return "movie/detail";

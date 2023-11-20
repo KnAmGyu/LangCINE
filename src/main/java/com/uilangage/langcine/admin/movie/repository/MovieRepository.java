@@ -14,6 +14,10 @@ public interface MovieRepository {
 	
 	public Movie getMovieInfo(@Param("id") int id);
 	
+//	개봉일이 오늘날짜보다 뒤에 있을 때
+	public List<Movie> getMovieExpected();
+	
+	public List<Movie> getMovieByExposureScreen();
 	
 	public List<Movie> getMovie();	
 	
@@ -31,7 +35,8 @@ public interface MovieRepository {
 			, @Param("story") String story
 			, @Param("runningTime") int runningTime
 			, @Param("openDay") String openDay
-			, @Param("exposure") String exposure);
+			, @Param("exposure") String exposure
+			, @Param("screening") String screening);
 	
 	
 }

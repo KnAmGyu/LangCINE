@@ -59,7 +59,7 @@
 		 let runningTime = $("#runningTimeInput").val();
 		 let openDay =  $.datepicker.formatDate("yy-mm-dd",$("#openDayInput").datepicker("getDate")); 
 		 let exposure = $("input[name=exposure]:checked").val();
-
+	     let screening = $("input[name=screening]:checked").val();
 			
 
 	 	 let formData = new FormData();
@@ -74,6 +74,7 @@
 				formData.append("runningTime", runningTime);
 				formData.append("openDay", openDay);
 				formData.append("exposure", exposure);
+				formData.append("screening", screening);
 		
 		$.ajax({
 				type:"post"
